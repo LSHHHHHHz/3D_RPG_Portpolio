@@ -1,0 +1,474 @@
+{
+    "data": {
+        "inventoryData": {
+            "slotDatas": [
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                }
+            ]
+        },
+        "equipmentData": {
+            "slotDatas": [
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                }
+            ]
+        },
+        "quickPortionSlotData": {
+            "slotDatas": [
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                }
+            ]
+        },
+        "quickSkillSlotData": {
+            "slotDatas": [
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                }
+            ]
+        },
+        "skillInventoryData": {
+            "slotDatas": [
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                },
+                {
+                    "item": {
+                        "iconPath": "",
+                        "name": "",
+                        "description": "",
+                        "type": ""
+                    },
+                    "count": 0,
+                    "maxCount": 99
+                }
+            ]
+        }
+    }
+}

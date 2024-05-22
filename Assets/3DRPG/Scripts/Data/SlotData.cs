@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
+
+[Serializable]
 public class SlotData
 {
     public GameItemData item;
@@ -41,13 +43,13 @@ public class SlotData
     }
 }
 
-public interface ISlotDataContainer
+public interface ISlotData
 {
     void InitializeSlots(int count);
 }
 
-[System.Serializable]
-public class SlotDataContainer : ISlotDataContainer
+[Serializable]
+public class SlotDataInitialize : ISlotData
 {
     public List<SlotData> slotDatas;
 
@@ -61,8 +63,8 @@ public class SlotDataContainer : ISlotDataContainer
     }
 }
 
-[System.Serializable]
-public class QuickPortionSlotData : SlotDataContainer
+[Serializable]
+public class QuickPortionSlotData : SlotDataInitialize
 {
     public QuickPortionSlotData()
     {
@@ -70,8 +72,8 @@ public class QuickPortionSlotData : SlotDataContainer
     }
 }
 
-[System.Serializable]
-public class QuickSkillSlotData : SlotDataContainer
+[Serializable]
+public class QuickSkillSlotData : SlotDataInitialize
 {
     public QuickSkillSlotData()
     {
@@ -79,17 +81,17 @@ public class QuickSkillSlotData : SlotDataContainer
     }
 }
 
-[System.Serializable]
-public class InventoryData : SlotDataContainer
+[Serializable]
+public class ItemInventoryData : SlotDataInitialize
 {
-    public InventoryData()
+    public ItemInventoryData()
     {
         InitializeSlots(28);
     }
 }
 
-[System.Serializable]
-public class SkillInventoryData : SlotDataContainer
+[Serializable]
+public class SkillInventoryData : SlotDataInitialize
 {
     public SkillInventoryData()
     {
@@ -97,8 +99,8 @@ public class SkillInventoryData : SlotDataContainer
     }
 }
 
-[System.Serializable]
-public class EquipmentData : SlotDataContainer
+[Serializable]
+public class EquipmentData : SlotDataInitialize
 {
     public EquipmentData()
     {
@@ -106,8 +108,8 @@ public class EquipmentData : SlotDataContainer
     }
 }
 
-[System.Serializable]
-public class ShopData : ISlotDataContainer
+[Serializable]
+public class ShopData : ISlotData
 {
     public List<SlotData> portionShopSlotDatas;
     public List<SlotData> equipShopSlotData;
