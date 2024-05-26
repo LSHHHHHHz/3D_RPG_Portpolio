@@ -12,7 +12,7 @@ public class ItemInventoryPopup : MonoBehaviour,IPopup
 
     private void Start()
     {
-        inventoryData = UserDataViewer.instance.data.inventoryData;
+        inventoryData = GameDataViewer.instance.data.inventoryData;
         RefreshData();
         SetChildItemSlots(slotsTransform);
     }

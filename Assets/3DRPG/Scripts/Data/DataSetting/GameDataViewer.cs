@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-public class UserDataViewer : MonoBehaviour
+public class GameDataViewer : MonoBehaviour
 {
-    public static UserDataViewer instance;
-    public UserData data;
+    public static GameDataViewer instance;
+    public GameData data;
     private void Awake()
     {
         instance= this;
-        data = UserData.instance;
+        data = GameData.instance;
         Load();
     }
     [ContextMenu("Save To Json Data")]
@@ -28,5 +28,9 @@ public class UserDataViewer : MonoBehaviour
             string jsonData = File.ReadAllText(path);
             JsonUtility.FromJsonOverwrite(jsonData, instance);
         }
+    }
+    private void OnDisable()
+    {
+        Save();
     }
 }

@@ -12,7 +12,6 @@ public class NPCTalkState : IState
         this.character = character;
         this.player = player;
     }
-
     public void Enter( )
     {
         character.anim.SetTrigger("DoTalk");

@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Player : MonoBehaviour, ICharacterState
+public class Player : MonoBehaviour
 {
     public bool isTalk =false;
     GameObject scanObject;
-    public FSMController fSMController => throw new System.NotImplementedException();
-
-    public Animator anim => throw new System.NotImplementedException();
 
     public void ChangeState(IState newState)
     {

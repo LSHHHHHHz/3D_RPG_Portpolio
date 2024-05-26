@@ -469,6 +469,11 @@
                     "maxCount": 99
                 }
             ]
+        },
+        "characterData": {
+            "playerData": {},
+            "normarMonster": [],
+            "bossMonster": []
         }
     }
 }
