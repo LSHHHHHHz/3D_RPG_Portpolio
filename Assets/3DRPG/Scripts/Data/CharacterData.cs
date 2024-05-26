@@ -18,7 +18,7 @@ public class CharacterData
         }
     }
     public PlayerData playerData;
-    public List<NormarMonsterData> normarMonster;
+    public List<NormarMonsterData> normarMonster ;
     public List<BossMonsterData> bossMonster;
     private CharacterData()
     {
