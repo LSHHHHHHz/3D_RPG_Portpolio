@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerStatus : MonoBehaviour,IActor
 {
     public PlayerData playerData { get; private set; }
+
     [SerializeField] private PlayerStatusUI playerStatusUI;
     private void Start()
     {
@@ -14,6 +15,7 @@ public class PlayerStatus : MonoBehaviour,IActor
     private void InitializedStatus()
     {
         playerData = CharacterData.instance.playerData;
+
         playerStatusUI.SetData(playerData);
     }
     public void ReceiveEvent(IEvent iEvent)

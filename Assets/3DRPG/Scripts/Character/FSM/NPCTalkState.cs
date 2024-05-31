@@ -19,7 +19,7 @@ public class NPCTalkState : IState
 
     public void Exit()
     {
-        character.anim.ResetTrigger("DoTalk"); //실질적으로 필요하지 않을 수 있으나, 혹시모를 상황 방지 및 가독성 향상
+        character.anim.ResetTrigger("DoTalk");
     }
 
     public void Update()

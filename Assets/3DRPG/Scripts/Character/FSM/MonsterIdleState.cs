@@ -4,16 +4,14 @@ using UnityEngine;
 public class MonsterIdleState : IState
 {
     private readonly Monster monster;
-    private readonly Player player;
-    private float originNPCmoveSpeed;
 
-    public MonsterIdleState(Monster character, Player player)
+    public MonsterIdleState(Monster character)
     {
         this.monster = character;
-        this.player = player;
     }
     public void Enter()
     {
+        monster.anim.SetBool("IsWalk", false);
     }
 
     public void Exit()
@@ -22,5 +20,9 @@ public class MonsterIdleState : IState
 
     public void Update()
     {
+        if(monster.spawnerDetectActor!= null)
+        {
+            monster.fSMController.ChangeState(new MonsterIWalkState(monster));
+        }
     }
 }

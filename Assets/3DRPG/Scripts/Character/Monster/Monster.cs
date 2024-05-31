@@ -10,18 +10,25 @@ public class Monster : MonoBehaviour
     public FSMController fSMController { get; private set; }
     public Animator anim { get; private set; }
     public NavMeshAgent navMesh{ get; private set; }
-    DetectActor detectActor;
+    public DetectActor detectActor { get; private set; }
+    public IActor spawnerDetectActor { get; set; }
+    public Vector3 originPos { get; private set; }
     protected virtual void Awake()
     {
         fSMController= GetComponent<FSMController>();
         anim = GetComponent<Animator>();     
         navMesh= GetComponent<NavMeshAgent>();
         detectActor = new DetectActor();
+        originPos = transform.position;
     }
     protected virtual void Update()
     {
         fSMController.Update();
         detectActor.ClosetActorUpdate();
+    }
+    private void OnEnable()
+    {
+        ChangeState(new MonsterIdleState(this));
     }
     public void ChangeState(IState newState)
     {

@@ -29,8 +29,7 @@ public class NPCIdleState : IState
         Vector3 rotationDir = (player.transform.position - character.transform.position).normalized;
         Quaternion targetRotation = Quaternion.LookRotation(rotationDir);
         character.transform.rotation = Quaternion.Slerp(character.transform.rotation, targetRotation, character.rotationSpeed * Time.deltaTime);
-
-
+        
         if (player.isTalk) // 플레어와 대화를 하게 된다면을 조건문에 넣어야함
         {
             character.ChangeState(new NPCTalkState(character, player));            

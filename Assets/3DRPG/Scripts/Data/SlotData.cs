@@ -10,7 +10,7 @@ public class SlotData
     public GameItemData item;
     public int count;
     public int maxCount = 99;
-
+    public event Action OnDataChanged;
     public void AddItem(GameItemData newItem, int newCount)
     {
         if (newItem == null || newCount <= 0)
@@ -29,12 +29,14 @@ public class SlotData
                 count = maxCount;
             }
         }
+        OnDataChanged?.Invoke();
     }
 
     public void RemoveItem()
     {
         item = null;
         count = 0;
+        OnDataChanged?.Invoke();
     }
 
     public GameItemData GetItem()
@@ -46,12 +48,13 @@ public class SlotData
 public interface ISlotData
 {
     void InitializeSlots(int count);
+    List<SlotData> slotDatas { get; }
 }
 
 [Serializable]
 public class SlotDataInitialize : ISlotData
 {
-    public List<SlotData> slotDatas;
+    public List<SlotData> slotDatas { get; private set;}
 
     public void InitializeSlots(int count)
     {
@@ -84,6 +87,10 @@ public class QuickSkillSlotData : SlotDataInitialize
 [Serializable]
 public class ItemInventoryData : SlotDataInitialize
 {
+    public void AddSlot()
+    {
+        slotDatas.Add(new SlotData());
+    }
     public ItemInventoryData()
     {
         InitializeSlots(28);
@@ -100,53 +107,28 @@ public class SkillInventoryData : SlotDataInitialize
 }
 
 [Serializable]
-public class EquipmentData : SlotDataInitialize
+public class EquipmentInventoryData : SlotDataInitialize
 {
-    public EquipmentData()
+    public EquipmentInventoryData()
     {
         InitializeSlots(2);
     }
 }
-
 [Serializable]
-public class ShopData : ISlotData
+
+public class EquipShopData : SlotDataInitialize
 {
-    public List<SlotData> portionShopSlotDatas;
-    public List<SlotData> equipShopSlotData;
-
-    public void InitializeSlots(int count)
-    {
-        portionShopSlotDatas = new List<SlotData>(count);
-        for (int i = 0; i < count; i++)
-        {
-            portionShopSlotDatas.Add(new SlotData());
-        }
-
-        equipShopSlotData = new List<SlotData>(count);
-        for (int i = 0; i < count; i++)
-        {
-            equipShopSlotData.Add(new SlotData());
-        }
-    }
-
-    public ShopData()
+    public EquipShopData()
     {
         InitializeSlots(8);
     }
+}
+[Serializable]
 
-    public List<SlotData> GetSlotsByNumber(int shopNumber)
+public class PortionShopData : SlotDataInitialize
+{
+   public  PortionShopData()
     {
-        if (shopNumber == 1)
-        {
-            return portionShopSlotDatas;
-        }
-        else if (shopNumber == 2)
-        {
-            return equipShopSlotData;
-        }
-        else
-        {
-            return null;
-        }
+        InitializeSlots(8);
     }
 }

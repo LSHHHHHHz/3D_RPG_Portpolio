@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class CharacterData
 {
-    public static CharacterData _instance;
+    private static CharacterData _instance;
     public static CharacterData instance
     {
         get
@@ -18,27 +18,27 @@ public class CharacterData
         }
     }
     public PlayerData playerData;
-    public List<NormarMonsterData> normarMonster ;
-    public List<BossMonsterData> bossMonster;
-    private CharacterData()
+    public List<NormarMonsterData> normarMonsters;
+    public List<BossMonsterData> bossMonsters;
+    public CharacterData()
     {
         playerData = new PlayerData("이승훈", "아직 못정함", 100, 100, 50, 50, 100, 0, 1, 100, 50);
-    }
+    }  
 }
 [System.Serializable]
 public class PlayerData
 {
-    public string playerName { get; private set; }
-    public string iconPath { get; private set; }
-    public float maxHP { get; private set; }
-    public float currentHP { get; private set; }
-    public int lvUpHP { get; private set; }
-    public float maxMP { get; private set; }
-    public float currentMP { get; private set; }
-    public int lvUpMP { get; private set; }
-    public float maxExp { get; private set; }
-    public float currentExp { get; private set; }
-    public int playerLV { get; private set; }
+    [SerializeField] public string playerName; //status에 있으면 이상함
+    [SerializeField] public string iconPath;
+    [SerializeField] public float maxHP;
+    [SerializeField] public float currentHP;
+    [SerializeField] public int lvUpHP;
+    [SerializeField] public float maxMP;
+    [SerializeField] public float currentMP;
+    [SerializeField] public int lvUpMP;
+    [SerializeField] public float maxExp;
+    [SerializeField] public float currentExp;
+    [SerializeField] public int playerLV;
 
     public void AddMaxHP(int amount)
     {
@@ -64,7 +64,7 @@ public class PlayerData
             LevelUp();
         }
     }
-    private void LevelUp()
+    private void LevelUp() //LV업 상태는 데이터에서 관리X LV만 관리하면됨
     {
         playerLV++;
         currentExp -= maxExp;

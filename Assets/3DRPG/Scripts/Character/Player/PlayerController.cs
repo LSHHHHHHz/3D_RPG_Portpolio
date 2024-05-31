@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] CharacterController controller;
     [SerializeField] GameObject playerRotation;
     [SerializeField] Transform camera_Point;
-    [SerializeField] float playerSpeed;
+    [SerializeField] int playerSpeed;
     [SerializeField] float acceleration;
     [SerializeField] float deceleration;
     [SerializeField] float turnSpeed;
