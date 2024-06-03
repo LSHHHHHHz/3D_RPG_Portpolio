@@ -23,7 +23,7 @@ public class MonsterAttackState : IState
 
     public void Update()
     {
-        if (monster.detectActor.closetActor != null && monster.detectActor.closetActor is PlayerStatus player)
+        if (monster.detectActor.closetActor != null && monster.detectActor.closetActor is Player player)
         {
             monster.transform.LookAt(player.transform);
         }

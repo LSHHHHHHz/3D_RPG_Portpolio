@@ -27,7 +27,7 @@ public class MonsterIWalkState : IState
         }
         if (monster.spawnerDetectActor != null)
         {
-            if (monster.spawnerDetectActor is PlayerStatus player)
+            if (monster.spawnerDetectActor is Player player)
             {
                 monster.navMesh.SetDestination(player.transform.position);
                 monster.transform.LookAt(player.transform.position);

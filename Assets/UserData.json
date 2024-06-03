@@ -760,18 +760,17 @@
         ]
     },
     "characterData": {
-        "playerData": {
-            "playerName": "이승훈",
-            "iconPath": "아직 못정함",
+        "playerStatusData": {
             "maxHP": 100.0,
             "currentHP": 100.0,
-            "lvUpHP": 100,
             "maxMP": 50.0,
             "currentMP": 50.0,
-            "lvUpMP": 50,
             "maxExp": 100.0,
             "currentExp": 0.0,
-            "playerLV": 1
+            "playerLV": 1,
+            "lvUpHP": 100,
+            "lvUpMP": 50,
+            "lvUpEXP": 100
         },
         "normarMonsters": [],
         "bossMonsters": []

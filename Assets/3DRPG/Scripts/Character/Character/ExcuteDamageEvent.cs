@@ -17,7 +17,7 @@ public class ExcuteDamageEvent : IEvent
     {
         if(target != null)
         {
-            if(target is PlayerStatus player)
+            if(target is Player player)
             {
 
             }

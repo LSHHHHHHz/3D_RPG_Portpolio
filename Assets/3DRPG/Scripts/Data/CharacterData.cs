@@ -17,28 +17,33 @@ public class CharacterData
             return _instance;
         }
     }
-    public PlayerData playerData;
+    public PlayerStatusData playerStatusData;
+    public PlayerProfileData playerProfileData;
+    public PlayerCurrencyData playerCurrencyData;
     public List<NormarMonsterData> normarMonsters;
     public List<BossMonsterData> bossMonsters;
     public CharacterData()
     {
-        playerData = new PlayerData("이승훈", "아직 못정함", 100, 100, 50, 50, 100, 0, 1, 100, 50);
+        playerStatusData = new PlayerStatusData(100, 100, 50, 50, 100, 0, 1, 100, 50,100);
+        playerProfileData = new PlayerProfileData("이승훈", "아직");
+        playerCurrencyData = new PlayerCurrencyData(5000);
     }  
 }
 [System.Serializable]
-public class PlayerData
+public class PlayerStatusData
 {
-    [SerializeField] public string playerName; //status에 있으면 이상함
-    [SerializeField] public string iconPath;
+    //PlayerStatusUI에서 필요하기 때문에 private를 할 수가 없음
     [SerializeField] public float maxHP;
     [SerializeField] public float currentHP;
-    [SerializeField] public int lvUpHP;
     [SerializeField] public float maxMP;
     [SerializeField] public float currentMP;
-    [SerializeField] public int lvUpMP;
     [SerializeField] public float maxExp;
     [SerializeField] public float currentExp;
     [SerializeField] public int playerLV;
+
+    [SerializeField] public int lvUpHP;
+    [SerializeField] public int lvUpMP;
+    [SerializeField] public int lvUpEXP;
 
     public void AddMaxHP(int amount)
     {
@@ -59,29 +64,9 @@ public class PlayerData
     public void AddExp(int amount)
     {
         currentExp += amount;
-        while (currentExp >= maxExp)
-        {
-            LevelUp();
-        }
     }
-    private void LevelUp() //LV업 상태는 데이터에서 관리X LV만 관리하면됨
+    public PlayerStatusData(int maxHP, int currentHP, int maxMP, int currentMP, int maxExp, int currentExp, int playerLV, int lvUpHP, int lvUpMP, int lvUpEXP)
     {
-        playerLV++;
-        currentExp -= maxExp;
-        maxExp = NextLvExp();
-        maxHP += lvUpHP;
-        currentHP = maxHP;
-        maxMP += lvUpMP;
-        currentMP = maxMP;
-    }
-    private float NextLvExp()
-    {
-        return maxExp + 100;
-    }
-    public PlayerData(string playerName, string iconPath, int maxHP, int currentHP, int maxMP, int currentMP, int maxExp, int currentExp, int playerLV, int lvUpHP, int lvUpMP)
-    {
-        this.playerName = playerName;
-        this.iconPath = iconPath;
         this.maxHP = maxHP;
         this.currentHP = currentHP;
         this.maxMP = maxMP;
@@ -91,6 +76,43 @@ public class PlayerData
         this.playerLV = playerLV;
         this.lvUpHP = lvUpHP;
         this.lvUpMP = lvUpMP;
+        this.lvUpEXP = lvUpEXP;
+    }
+}
+public class PlayerProfileData
+{
+    [SerializeField] public string playerName;
+    [SerializeField] public string iconPath;
+
+    public void ChangeName(string name)
+    {
+        playerName = name;
+    }
+    public void ChangeIconPath(string path)
+    {
+        iconPath = path;
+    }
+
+    public PlayerProfileData(string playerName, string iconPath)
+    {
+        this.playerName = playerName;
+        this.iconPath = iconPath;
+    }
+}
+public class PlayerCurrencyData
+{
+    [SerializeField]public int coin;
+    public void GetCoin(int getCoin)
+    {
+        this.coin += getCoin;
+    }
+    public void ConsumeCoint(int consum)
+    {
+        this.coin -= consum;
+    }
+    public PlayerCurrencyData(int coin)
+    {
+        this.coin = coin;
     }
 }
 [System.Serializable]
