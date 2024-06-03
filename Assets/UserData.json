@@ -3,14 +3,14 @@
         "_slotDatas": [
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": "",
-                    "coolDown": 0,
-                    "requiredLV": 0
+                    "iconPath": "Portion/HP1",
+                    "name": "기초 HP 포션",
+                    "description": "체력이 100만큼 회복됩니다.",
+                    "type": "Portion",
+                    "coolDown": 5,
+                    "requiredLV": 1
                 },
-                "count": 0,
+                "count": 1,
                 "maxCount": 99
             },
             {

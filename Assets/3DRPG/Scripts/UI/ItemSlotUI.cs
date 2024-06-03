@@ -14,6 +14,8 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IBeginDragHandler, IDragH
     [SerializeField] Sprite nullImage;
     [SerializeField] Text itemCountText;
     [SerializeField] Image coolDownImage;
+
+    [SerializeField] GameObject infoPopupPrefab;
     public bool isActiveCoolTime { get; private set; }
     public SlotData currentSlotData { get; private set; }
     public ISlotData currentISlot { get; private set; }
@@ -27,6 +29,7 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IBeginDragHandler, IDragH
 
     static SlotData dragSlotData;
     static ISlotData dragISlotData;
+    InfoPopup infoPopup;
     public Action<SlotData> endDragSlot { get; set; } = null;
     public Action<SlotData> dropSlot { get; set; } = null;
     private void Awake()
@@ -50,7 +53,7 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IBeginDragHandler, IDragH
             {
                 itemIcon.sprite = Resources.Load<Sprite>(currentSlotData.item.iconPath);
             }
-            if(currentSlotData.item == null || currentSlotData.item.name == "" || currentSlotData.count ==0) 
+            if (currentSlotData.item == null || currentSlotData.item.name == "" || currentSlotData.count == 0)
             {
                 itemIcon.sprite = nullImage;
             }
@@ -59,9 +62,9 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IBeginDragHandler, IDragH
         {
             description.text = currentSlotData.item.description;
         }
-        if (price != null )
+        if (price != null)
         {
-            if(currentSlotData.item is PortionData portionData)
+            if (currentSlotData.item is PortionData portionData)
             {
                 price.text = portionData.itemPrice.ToString();
             }
@@ -76,7 +79,7 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IBeginDragHandler, IDragH
         }
         if (itemCountText != null)
         {
-            if(currentSlotData.count>0)
+            if (currentSlotData.count > 0)
             {
                 itemCountText.text = currentSlotData.count.ToString();
                 itemCountText.gameObject.SetActive(true);
@@ -85,7 +88,7 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IBeginDragHandler, IDragH
             {
                 itemCountText.gameObject.SetActive(false);
             }
-        }        
+        }
     }
     public void CoolDown(int coolTime)
     {
@@ -98,8 +101,8 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IBeginDragHandler, IDragH
     IEnumerator CoolDownCoroutine(int coolTime)
     {
         float elapsedTime = 0;
-        isActiveCoolTime= true;
-        while(elapsedTime< coolTime)
+        isActiveCoolTime = true;
+        while (elapsedTime < coolTime)
         {
             elapsedTime += Time.deltaTime;
             coolDownImage.fillAmount = 1 - (elapsedTime / coolTime);
@@ -107,14 +110,14 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IBeginDragHandler, IDragH
         }
         coolDownImage.fillAmount = 0;
         coolDownImage.gameObject.SetActive(false);
-        isActiveCoolTime= false;
+        isActiveCoolTime = false;
     }
     public void OnDrop(PointerEventData eventData)
     {
         if (currentSlotData.item.name == dragSlotData.item.name)
         {
             currentSlotData.AddItem(currentSlotData.item, dragSlotData.count);
-            dragSlotData.RemoveItem();            
+            dragSlotData.RemoveItem();
         }
         else
         {
@@ -125,7 +128,7 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IBeginDragHandler, IDragH
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if(currentISlot is PortionShopData || currentISlot is EquipShopData)
+        if (currentISlot is PortionShopData || currentISlot is EquipShopData)
         {
             return;
         }
@@ -152,14 +155,35 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IBeginDragHandler, IDragH
             {
 
             }
-        }        
+        }
         canvasGroup.alpha = 1.0f;
         canvasGroup.blocksRaycasts = true;
     }
     public void OnPointerExit(PointerEventData eventData)
     {
+        if (infoPopup != null)
+        {
+            infoPopup.ClosePopupUI();
+        }
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
+        if (infoPopupPrefab != null &&currentSlotData.item != null && currentSlotData.item.name != "" && currentSlotData.item.name != null)
+        {
+            if (infoPopup == null)
+            {
+                infoPopup = Instantiate(infoPopupPrefab, TransformFactory.instance.infoPopupTransform).GetComponent<InfoPopup>();
+                infoPopup.SetData(currentSlotData,this.transform);
+            }
+            else
+            {
+                infoPopup.OpenPopupUI();
+                infoPopup.SetData(currentSlotData, this.transform);
+            }
+        }
+        else
+        {
+            return;
+        }
     }
 }

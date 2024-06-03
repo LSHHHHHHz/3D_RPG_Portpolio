@@ -9,6 +9,7 @@ public class TransformFactory : MonoBehaviour
     public static TransformFactory instance;
     public Transform buyPopupTransform;
     public Transform shopPopupTransform;
+    public Transform infoPopupTransform;
     private void Awake()
     {
         instance = this;
