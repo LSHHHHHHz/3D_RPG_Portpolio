@@ -59,6 +59,7 @@ public class GameItemData
     public string name;
     public string description;
     public string type;
+    public int coolDown;
     public int requiredLV;
 }
 [System.Serializable]
@@ -66,7 +67,6 @@ public class PortionData : GameItemData
 {
     public int hpRecovery;
     public int mpRecovery;
-    public int coolDown;
     public int itemPrice;
     public PortionData(string iconPath, string itemName, string itemDescription, string type, int hpRecovery, int mpRecovery, int coolDown, int itemPrice, int requiredLV)
     {
@@ -105,9 +105,10 @@ public class EquipData : GameItemData
 public class SkillData : GameItemData
 {
     public int damage;
-    public int coolDown;
     public int consumMP;
     public string prefabPath;
+    private bool isUnlocked;
+    private List<SkillData> preRequiredSkills;
     public SkillData(string iconPath, string itemName, string itemDescription, string type, int damage, int coolDown, int consumMP, string prefabPath, int requiredLV)
     {
         this.iconPath = iconPath;
@@ -119,5 +120,13 @@ public class SkillData : GameItemData
         this.consumMP = consumMP;
         this.prefabPath = prefabPath;
         this.requiredLV = requiredLV;
+    }
+    public void AddPreRequiredSkill(SkillData skill)
+    {
+        preRequiredSkills.Add(skill);
+    }
+    public void UnLockSkill()
+    {
+        this.isUnlocked = true;
     }
 }

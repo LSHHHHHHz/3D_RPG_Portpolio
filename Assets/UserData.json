@@ -1,11 +1,764 @@
 {
-    "inventoryData": {},
-    "equipInventoryData": {},
-    "quickPortionSlotData": {},
-    "quickSkillSlotData": {},
-    "skillInventoryData": {},
-    "equipShopData": {},
-    "portionShopData": {},
+    "inventoryData": {
+        "_slotDatas": [
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            }
+        ]
+    },
+    "equipInventoryData": {
+        "_slotDatas": [
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            }
+        ]
+    },
+    "quickPortionSlotData": {
+        "_slotDatas": [
+            {
+                "item": {
+                    "iconPath": "Portion/HP1",
+                    "name": "기초 HP 포션",
+                    "description": "체력이 100만큼 회복됩니다.",
+                    "type": "Portion",
+                    "coolDown": 5,
+                    "requiredLV": 1
+                },
+                "count": 2,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "Portion/HP1",
+                    "name": "기초 HP 포션",
+                    "description": "체력이 100만큼 회복됩니다.",
+                    "type": "Portion",
+                    "coolDown": 5,
+                    "requiredLV": 1
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            }
+        ]
+    },
+    "quickSkillSlotData": {
+        "_slotDatas": [
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            }
+        ]
+    },
+    "skillInventoryData": {
+        "_slotDatas": [
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            }
+        ]
+    },
+    "equipShopData": {
+        "_slotDatas": [
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            }
+        ]
+    },
+    "portionShopData": {
+        "_slotDatas": [
+            {
+                "item": {
+                    "iconPath": "Portion/HP1",
+                    "name": "기초 HP 포션",
+                    "description": "체력이 100만큼 회복됩니다.",
+                    "type": "Portion",
+                    "coolDown": 5,
+                    "requiredLV": 1
+                },
+                "count": 1,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "Portion/HP2",
+                    "name": "기본 HP 포션",
+                    "description": "체력이 300만큼 회복됩니다.",
+                    "type": "Portion",
+                    "coolDown": 5,
+                    "requiredLV": 2
+                },
+                "count": 1,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "Portion/HP3",
+                    "name": "중급 HP 포션",
+                    "description": "체력이 500만큼 회복됩니다.",
+                    "type": "Portion",
+                    "coolDown": 5,
+                    "requiredLV": 3
+                },
+                "count": 1,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "Portion/HP4",
+                    "name": "고급 HP 포션",
+                    "description": "체력이 1000만큼 회복됩니다.",
+                    "type": "Portion",
+                    "coolDown": 5,
+                    "requiredLV": 4
+                },
+                "count": 1,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "Portion/MP1",
+                    "name": "기초 MP 포션",
+                    "description": "마력이 10만큼 회복됩니다.",
+                    "type": "Portion",
+                    "coolDown": 5,
+                    "requiredLV": 1
+                },
+                "count": 1,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "Portion/MP2",
+                    "name": "기본 MP 포션",
+                    "description": "마력이 30만큼 회복됩니다.",
+                    "type": "Portion",
+                    "coolDown": 5,
+                    "requiredLV": 2
+                },
+                "count": 1,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "Portion/MP3",
+                    "name": "중급 MP 포션",
+                    "description": "마력이 50만큼 회복됩니다.",
+                    "type": "Portion",
+                    "coolDown": 5,
+                    "requiredLV": 3
+                },
+                "count": 1,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "Portion/MP4",
+                    "name": "고급 MP 포션",
+                    "description": "마력이 100만큼 회복됩니다.",
+                    "type": "Portion",
+                    "coolDown": 5,
+                    "requiredLV": 4
+                },
+                "count": 1,
+                "maxCount": 99
+            }
+        ]
+    },
     "characterData": {
         "playerData": {
             "playerName": "이승훈",

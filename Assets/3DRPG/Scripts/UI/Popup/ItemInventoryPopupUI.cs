@@ -10,17 +10,13 @@ public class ItemInventoryPopupUI : MonoBehaviour,IPopup
     [SerializeField] GameObject slotPrefab;
     List<GameObject> slotPrefabList = new List<GameObject>();
 
-    private void Start()
+    private void Awake()
     {
         itemInventoryData = GameData.instance.inventoryData;
-        RefreshData();
-        SetChildItemSlots(slotsTransform);
+        SetSlots();
+        SetSlotInteractions(slotsTransform);
     }
-    private void RefreshData()
-    {
-        RefreshSlots();
-    }
-    void RefreshSlots()
+    void SetSlots()
     {
         for(int i = slotPrefabList.Count; i<itemInventoryData.slotDatas.Count; i++ )
         {
@@ -29,24 +25,21 @@ public class ItemInventoryPopupUI : MonoBehaviour,IPopup
         }
         for(int i =0; i< itemInventoryData.slotDatas.Count; i++ )
         {
-            ItemSlotUI slotUI = slotPrefabList[i].GetComponent<ItemSlotUI>();
+            ItemSlotUI slotUI = slotPrefabList[i].GetComponentInChildren<ItemSlotUI>();
             if(slotUI != null)
             {
-                slotUI.SetData(itemInventoryData.slotDatas[i]);
+                slotUI.SetData(itemInventoryData.slotDatas[i], itemInventoryData);
             }
         }
     }
-    void SetChildItemSlots(RectTransform slotsTransform)
+    void SetSlotInteractions(RectTransform slotsTransform)
     {
         for (int i = 0; i < slotsTransform.childCount; i++)
         {
             Transform transform = slotsTransform.GetChild(i);
-            ItemSlotUI itemSlotUI = transform.GetComponent<ItemSlotUI>();
+            ItemSlotUI itemSlotUI = transform.GetComponentInChildren<ItemSlotUI>();
             if (itemSlotUI != null)
             {
-                int slotIndex = i;
-
-
                 if (itemSlotUI.GetComponent<Button>() != null)
                 {
                     Button slotButton = itemSlotUI.GetComponent<Button>();
