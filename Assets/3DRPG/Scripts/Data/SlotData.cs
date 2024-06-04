@@ -58,8 +58,8 @@ public class SlotData
         dropData.count = tempCount;
 
         OnDataChanged?.Invoke();
-        dropData.OnDataChanged?.Invoke();
-        dragData.OnDataChanged?.Invoke();
+       // dropData.OnDataChanged?.Invoke();
+       // dragData.OnDataChanged?.Invoke();
     }
 }
 

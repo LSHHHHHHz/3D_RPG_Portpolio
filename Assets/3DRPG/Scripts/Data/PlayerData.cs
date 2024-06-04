@@ -3,26 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class CharacterData
+public class PlayerData
 {
-    private static CharacterData _instance;
-    public static CharacterData instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                _instance = new CharacterData();
-            }
-            return _instance;
-        }
-    }
     public PlayerStatusData playerStatusData;
     public PlayerProfileData playerProfileData;
     public PlayerCurrencyData playerCurrencyData;
-    public List<NormarMonsterData> normarMonsters;
-    public List<BossMonsterData> bossMonsters;
-    public CharacterData()
+    public PlayerData()
     {
         playerStatusData = new PlayerStatusData(100, 100, 50, 50, 100, 0, 1, 100, 50,100);
         playerProfileData = new PlayerProfileData("이승훈", "아직");
@@ -32,7 +18,6 @@ public class CharacterData
 [System.Serializable]
 public class PlayerStatusData
 {
-    //PlayerStatusUI에서 필요하기 때문에 private를 할 수가 없음
     [SerializeField] public float maxHP;
     [SerializeField] public float currentHP;
     [SerializeField] public float maxMP;
@@ -45,26 +30,6 @@ public class PlayerStatusData
     [SerializeField] public int lvUpMP;
     [SerializeField] public int lvUpEXP;
 
-    public void AddMaxHP(int amount)
-    {
-        maxHP += amount;
-    }
-    public void StatusCurrentHP(int maxHP)
-    {
-        currentHP += maxHP;
-    }
-    public void AddMaxMP(int amount)
-    {
-        maxMP += amount;
-    }
-    public void StatusCurrentMP(int maxMP)
-    {
-        currentMP += maxMP;
-    }
-    public void AddExp(int amount)
-    {
-        currentExp += amount;
-    }
     public PlayerStatusData(int maxHP, int currentHP, int maxMP, int currentMP, int maxExp, int currentExp, int playerLV, int lvUpHP, int lvUpMP, int lvUpEXP)
     {
         this.maxHP = maxHP;
@@ -113,38 +78,5 @@ public class PlayerCurrencyData
     public PlayerCurrencyData(int coin)
     {
         this.coin = coin;
-    }
-}
-[System.Serializable]
-public class MonsterData
-{
-    public string monsterName;
-    public string iconPath;
-    public int maxHP;
-    public int expAmount;
-    public int damage;
-}
-[System.Serializable]
-public class NormarMonsterData : MonsterData
-{
-    public NormarMonsterData(string monsterName, string iconPath, int maxHP, int exp, int damage)
-    {
-        this.monsterName = monsterName;
-        this.iconPath = iconPath;
-        this.maxHP = maxHP;
-        this.expAmount = exp;
-        this.damage = damage;
-    }
-}
-[System.Serializable]
-public class BossMonsterData : MonsterData
-{
-    public BossMonsterData(string monsterName, string iconPath, int maxHP, int exp, int damage)
-    {
-        this.monsterName = monsterName;
-        this.iconPath = iconPath;
-        this.maxHP = maxHP;
-        this.expAmount = exp;
-        this.damage = damage;
     }
 }

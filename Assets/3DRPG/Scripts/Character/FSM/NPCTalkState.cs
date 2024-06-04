@@ -30,7 +30,7 @@ public class NPCTalkState : IState
         if (stateInfo.IsName("DoTalk") && stateInfo.normalizedTime >= 1.0f)
         {
             player.isTalk = false;
-            character.ChangeState(new NPCIdleState(character, player));
+            character.ChangeState(new NPCLookPlayerState(character, player));
         }
     }
 }

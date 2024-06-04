@@ -16,19 +16,24 @@ public class Player : MonoBehaviour, IActor
     {
         InitializedStatus();
     }
-
     private void Update()
     {
         if(scanObject != null && Input.GetButtonDown("Check"))
         {
             isTalk= true;
+            if(scanObject.GetComponent<NPC>() is ShopNPC shopNPC)
+            {
+                Instantiate(shopNPC.shopPopup, TransformFactory.instance.shopPopupTransform);
+            }
         }
     }
+    // 
+
     private void InitializedStatus()
     {
-        playerStatusData = CharacterData.instance.playerStatusData;
-        playerProfileData = CharacterData.instance.playerProfileData;
-        playerCurrencyData = CharacterData.instance.playerCurrencyData;
+        playerStatusData = GameData.instance.playerData.playerStatusData;
+        playerProfileData = GameData.instance.playerData.playerProfileData;
+        playerCurrencyData = GameData.instance.playerData.playerCurrencyData;
         playerStatusUI.SetData(playerStatusData);
         playerStatusUI.SetData(playerProfileData);
         playerStatusUI.SetData(playerCurrencyData);
@@ -40,27 +45,27 @@ public class Player : MonoBehaviour, IActor
     }
     public void TakeDamage(int amount)
     {
-        playerStatusData.StatusCurrentHP(-amount);
+        playerStatusData.currentHP -=amount;
         playerStatusUI.SetData(playerStatusData);
     }
     public void RecoveryHP(int amount)
     {
-        playerStatusData.StatusCurrentHP(amount);
+        playerStatusData.currentHP += amount;
         playerStatusUI.SetData(playerStatusData);
     }
     public void UseMP(int amount)
     {
-        playerStatusData.StatusCurrentMP(-amount);
+        playerStatusData.currentMP -=amount;
         playerStatusUI.SetData(playerStatusData);
     }
     public void RecoveryMP(int amount)
     {
-        playerStatusData.StatusCurrentMP(amount);
+        playerStatusData.currentMP += amount;
         playerStatusUI.SetData(playerStatusData);
     }
     public void GainExperience(int expAmount)
     {
-        playerStatusData.AddExp(expAmount);
+        playerStatusData.currentExp += expAmount;
         playerStatusUI.SetData(playerStatusData);
     }
     public void CheckExpLV()
@@ -87,6 +92,10 @@ public class Player : MonoBehaviour, IActor
         playerCurrencyData.ConsumeCoint(consumCoin);
         playerStatusUI.SetData(playerCurrencyData);
     }
+
+    // NPC 감지하는 역할
+
+    // public class ActorScanner : Monobehavior 또는 NPCScanner : MonoBehaviour 
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("NPC"))
@@ -101,4 +110,5 @@ public class Player : MonoBehaviour, IActor
             scanObject = null;
         }
     }
+    // 
 }

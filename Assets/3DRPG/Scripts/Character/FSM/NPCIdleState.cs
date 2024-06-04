@@ -1,38 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
+
 public class NPCIdleState : IState
 {
     private readonly NPC character;
-    private readonly Player player;
-    private float originNPCmoveSpeed;
-
-    public NPCIdleState(NPC character, Player player)
+    private Vector3[] dirs;
+    float elapsedTime;
+    int num;
+    Quaternion toRotation;
+    public NPCIdleState(NPC character)
     {
         this.character = character;
-        this.player = player;
     }
     public void Enter()
     {
-        originNPCmoveSpeed = character.moveSpeed;
-        character.moveSpeed = 0;
-        
+        dirs = new Vector3[] { new(0, 0, 0), new(0, 90, 0), new(0, 180, 0), new(0, 270, 0) };
+        elapsedTime = 0;
+        num = Random.Range(0, dirs.Length);
+        toRotation = Quaternion.Euler(dirs[num]);
     }
 
     public void Exit()
     {
-        character.moveSpeed = originNPCmoveSpeed;
     }
 
     public void Update()
     {
-        Vector3 rotationDir = (player.transform.position - character.transform.position).normalized;
-        Quaternion targetRotation = Quaternion.LookRotation(rotationDir);
-        character.transform.rotation = Quaternion.Slerp(character.transform.rotation, targetRotation, character.rotationSpeed * Time.deltaTime);
-        
-        if (player.isTalk) // 플레어와 대화를 하게 된다면을 조건문에 넣어야함
+        if (elapsedTime <5)
         {
-            character.ChangeState(new NPCTalkState(character, player));            
+            character.transform.rotation = Quaternion.RotateTowards(character.transform.rotation, toRotation, character.rotationSpeed* Time.deltaTime);
+            elapsedTime += Time.deltaTime;
+        }
+        else
+        {
+            character.ChangeState(new NPCIdleState(character));
         }
     }
 }

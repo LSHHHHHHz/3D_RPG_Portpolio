@@ -3,14 +3,14 @@
         "_slotDatas": [
             {
                 "item": {
-                    "iconPath": "Portion/HP1",
-                    "name": "기초 HP 포션",
-                    "description": "체력이 100만큼 회복됩니다.",
-                    "type": "Portion",
-                    "coolDown": 5,
-                    "requiredLV": 1
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
                 },
-                "count": 1,
+                "count": 0,
                 "maxCount": 99
             },
             {
@@ -371,24 +371,12 @@
         "_slotDatas": [
             {
                 "item": {
-                    "iconPath": "Portion/HP1",
-                    "name": "기초 HP 포션",
-                    "description": "체력이 100만큼 회복됩니다.",
-                    "type": "Portion",
-                    "coolDown": 5,
-                    "requiredLV": 1
-                },
-                "count": 2,
-                "maxCount": 99
-            },
-            {
-                "item": {
-                    "iconPath": "Portion/HP1",
-                    "name": "기초 HP 포션",
-                    "description": "체력이 100만큼 회복됩니다.",
-                    "type": "Portion",
-                    "coolDown": 5,
-                    "requiredLV": 1
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
                 },
                 "count": 0,
                 "maxCount": 99
@@ -473,6 +461,18 @@
     },
     "skillInventoryData": {
         "_slotDatas": [
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
             {
                 "item": {
                     "iconPath": "",
@@ -663,103 +663,103 @@
         "_slotDatas": [
             {
                 "item": {
-                    "iconPath": "Portion/HP1",
-                    "name": "기초 HP 포션",
-                    "description": "체력이 100만큼 회복됩니다.",
-                    "type": "Portion",
-                    "coolDown": 5,
-                    "requiredLV": 1
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
                 },
-                "count": 1,
+                "count": 0,
                 "maxCount": 99
             },
             {
                 "item": {
-                    "iconPath": "Portion/HP2",
-                    "name": "기본 HP 포션",
-                    "description": "체력이 300만큼 회복됩니다.",
-                    "type": "Portion",
-                    "coolDown": 5,
-                    "requiredLV": 2
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
                 },
-                "count": 1,
+                "count": 0,
                 "maxCount": 99
             },
             {
                 "item": {
-                    "iconPath": "Portion/HP3",
-                    "name": "중급 HP 포션",
-                    "description": "체력이 500만큼 회복됩니다.",
-                    "type": "Portion",
-                    "coolDown": 5,
-                    "requiredLV": 3
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
                 },
-                "count": 1,
+                "count": 0,
                 "maxCount": 99
             },
             {
                 "item": {
-                    "iconPath": "Portion/HP4",
-                    "name": "고급 HP 포션",
-                    "description": "체력이 1000만큼 회복됩니다.",
-                    "type": "Portion",
-                    "coolDown": 5,
-                    "requiredLV": 4
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
                 },
-                "count": 1,
+                "count": 0,
                 "maxCount": 99
             },
             {
                 "item": {
-                    "iconPath": "Portion/MP1",
-                    "name": "기초 MP 포션",
-                    "description": "마력이 10만큼 회복됩니다.",
-                    "type": "Portion",
-                    "coolDown": 5,
-                    "requiredLV": 1
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
                 },
-                "count": 1,
+                "count": 0,
                 "maxCount": 99
             },
             {
                 "item": {
-                    "iconPath": "Portion/MP2",
-                    "name": "기본 MP 포션",
-                    "description": "마력이 30만큼 회복됩니다.",
-                    "type": "Portion",
-                    "coolDown": 5,
-                    "requiredLV": 2
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
                 },
-                "count": 1,
+                "count": 0,
                 "maxCount": 99
             },
             {
                 "item": {
-                    "iconPath": "Portion/MP3",
-                    "name": "중급 MP 포션",
-                    "description": "마력이 50만큼 회복됩니다.",
-                    "type": "Portion",
-                    "coolDown": 5,
-                    "requiredLV": 3
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
                 },
-                "count": 1,
+                "count": 0,
                 "maxCount": 99
             },
             {
                 "item": {
-                    "iconPath": "Portion/MP4",
-                    "name": "고급 MP 포션",
-                    "description": "마력이 100만큼 회복됩니다.",
-                    "type": "Portion",
-                    "coolDown": 5,
-                    "requiredLV": 4
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": "",
+                    "coolDown": 0,
+                    "requiredLV": 0
                 },
-                "count": 1,
+                "count": 0,
                 "maxCount": 99
             }
         ]
     },
-    "characterData": {
+    "playerData": {
         "playerStatusData": {
             "maxHP": 100.0,
             "currentHP": 100.0,
@@ -771,8 +771,7 @@
             "lvUpHP": 100,
             "lvUpMP": 50,
             "lvUpEXP": 100
-        },
-        "normarMonsters": [],
-        "bossMonsters": []
-    }
+        }
+    },
+    "monsterData": {}
 }

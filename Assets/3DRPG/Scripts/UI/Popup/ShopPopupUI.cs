@@ -25,11 +25,11 @@ public class ShopPopupUI : MonoBehaviour,IPopup
         {
             case "포션":
                 shopData = GameData.instance.portionShopData;
-                gameItemDatas = StaticGameItemData.instance.portionDatas.ToArray();
+                gameItemDatas = GameData.instance.staticGameItemData.portionDatas.ToArray();
                 break;
             case "장비":
                 shopData = GameData.instance.equipShopData;
-                gameItemDatas = StaticGameItemData.instance.equipDatas.ToArray();
+                gameItemDatas = GameData.instance.staticGameItemData.equipDatas.ToArray();
                 break;
         }
     }

@@ -5,6 +5,13 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+public enum ItemType
+{
+    Shield,
+    Weapon,
+}
+
+
 public class ItemSlotUI : MonoBehaviour, IDropHandler, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerExitHandler, IPointerEnterHandler
 {
     [SerializeField] Image itemIcon;
@@ -90,6 +97,7 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IBeginDragHandler, IDragH
             }
         }
     }
+
     public void CoolDown(int coolTime)
     {
         if (coolDownImage != null)

@@ -16,7 +16,7 @@ public class SkillInventoryPopupUI : MonoBehaviour,IPopup
     }
     void SetSkillData()
     {
-        gameItemDatas = StaticGameItemData.instance.skillDatas.ToArray();
+        gameItemDatas = GameData.instance.staticGameItemData.skillDatas.ToArray();
     }
     void SetChildSkillSlot()
     {

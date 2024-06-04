@@ -24,7 +24,7 @@ public class MoveingNPC : NPC
     {
         if(other.CompareTag("Player"))
         {
-            ChangeState(new NPCIdleState(this, player));
+            ChangeState(new NPCLookPlayerState(this, player));
         }
     }
     private void OnTriggerExit(Collider other)

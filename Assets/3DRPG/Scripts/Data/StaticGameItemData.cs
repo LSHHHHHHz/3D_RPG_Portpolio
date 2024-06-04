@@ -4,18 +4,6 @@ using UnityEngine;
 
 public class StaticGameItemData
 {
-    private static StaticGameItemData _instance;
-    public static StaticGameItemData instance
-    {
-        get
-        {
-            if(_instance == null)
-            {
-                _instance = new StaticGameItemData();
-            }
-            return _instance;            
-        }
-    }
     public List<PortionData> portionDatas;
     public List<EquipData> equipDatas;
     public List<SkillData> skillDatas;

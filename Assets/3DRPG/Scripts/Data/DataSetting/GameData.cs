@@ -31,7 +31,10 @@ public class GameData
     public EquipShopData equipShopData;
     public PortionShopData portionShopData;
 
-    public CharacterData characterData;
+    public StaticGameItemData staticGameItemData;
+
+    public PlayerData playerData;
+    public MonsterData monsterData;
     public GameData()
     {
         inventoryData = new ItemInventoryData();
@@ -39,9 +42,11 @@ public class GameData
         quickPortionSlotData = new QuickPortionSlotData();
         quickSkillSlotData = new QuickSkillSlotData();
         skillInventoryData = new SkillInventoryData();
-        characterData = new CharacterData();
         equipShopData = new EquipShopData();
         portionShopData = new PortionShopData();
+        staticGameItemData = new StaticGameItemData();
+        playerData = new PlayerData();
+        monsterData= new MonsterData();
     }
     [ContextMenu("Save To Json Data")]
     public void Save()
