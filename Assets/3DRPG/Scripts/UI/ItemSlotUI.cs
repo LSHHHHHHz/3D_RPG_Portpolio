@@ -34,8 +34,8 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IPointerExitHandler, IPoi
     [SerializeField] Image coolDownImage;
 
     [SerializeField] GameObject infoPopupPrefab;
-    public ItemType currentItemType { get; private set; }
-    public InventoryType currentInventoryType { get; private set; }
+    public ItemType currentItemType;// { get; private set; }
+    public InventoryType currentInventoryType;//{ get; private set; }
     public bool isActiveCoolTime { get; private set; }
     public SlotData currentSlotData { get; private set; }
     public ISlotData currentISlot { get; private set; }
@@ -43,6 +43,15 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IPointerExitHandler, IPoi
     InfoPopup infoPopup;
     public Action<SlotData> endDragSlot { get; set; } = null;
     public Action<SlotData> dropSlot { get; set; } = null;
+    private void Start()
+    {
+        currentSlotData.OnSlotDataChanged += SetData;
+    }
+    public void SetData(SlotData data)
+    {
+        this.currentSlotData = data;
+        this.currentItemType = data.itemType;
+    }
     public void SetData(SlotData slotData, ISlotData islotData, ItemType itemType, InventoryType inventoryType)
     {
         this.currentSlotData = slotData;
@@ -121,15 +130,14 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IPointerExitHandler, IPoi
     }
     public void OnDrop(PointerEventData eventData)
     {
-        if (CheckPossibleDrop(currentInventoryType, currentItemType))
+        DragSlotUI dragSlotUI = eventData.pointerDrag.GetComponent<DragSlotUI>();
+        if (CheckPossibleDrop(currentInventoryType, dragSlotUI.dragItemType))
         {
             ScrollRect scroll = eventData.pointerDrag.GetComponent<ScrollRect>();
             if (scroll != null)
             {
                 return;
-            }
-            
-            DragSlotUI dragSlotUI = eventData.pointerDrag.GetComponent<DragSlotUI>();
+            }            
             if (currentSlotData.item.name != dragSlotUI.dragSlotData.item.name)
             {
                 currentSlotData.TempItem(currentSlotData, dragSlotUI.dragSlotData);
@@ -138,7 +146,6 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IPointerExitHandler, IPoi
             {
                 currentSlotData.MergeItem(currentSlotData, dragSlotUI.dragSlotData);
             }
-            dragSlotUI.UpdateSlotUI();
         }
     }
     public void OnPointerExit(PointerEventData eventData)

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -11,9 +12,10 @@ public class DragSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 {
     [SerializeField] Image itemIcon;
     [SerializeField] Sprite nullImage;
+    [SerializeField] public Button buttonIcon;
 
-    public ItemType dragItemType { get; private set; }
-    [SerializeField]public InventoryType dragInventoryType { get; private set; }
+    public ItemType dragItemType;
+    public InventoryType dragInventoryType;
     [SerializeField] public SlotData dragSlotData { get; private set; }
     public ISlotData dragISlotData { get; private set; }
 
@@ -37,6 +39,15 @@ public class DragSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         }
         rect = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
+    }
+    private void Start()
+    {
+        dragSlotData.OnSlotDataChanged += SetData;
+    }
+    public void SetData(SlotData data)
+    {
+        this.dragSlotData = data;
+        this.dragItemType = data.itemType;
     }
     public void SetData(SlotData slotData, ISlotData islotData, ItemType itemType, InventoryType inventoryType)
     {

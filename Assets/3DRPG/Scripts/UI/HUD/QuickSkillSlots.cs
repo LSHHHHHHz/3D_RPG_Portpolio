@@ -4,7 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class QuickSkillSlots : MonoBehaviour
+public class QuickSkillSlots : QuickSlots
 {
-    
+    protected override void Awake()
+    {
+        iSlotData = Player.instance.quickSkillSlotData;
+        inventoryType = InventoryType.QuickSkillSlot;
+        base.Awake();
+    }
 }

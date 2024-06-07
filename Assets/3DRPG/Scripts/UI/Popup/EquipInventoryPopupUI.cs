@@ -5,25 +5,39 @@ using UnityEngine.UI;
 
 public class EquipInventoryPopupUI : MonoBehaviour,IPopup
 {
-    ISlotData equipInventorSlotData;
-    GameItemData[] gameItemDatas;
-    [SerializeField] RectTransform[] equipSlots;
-
+    [SerializeField] InventoryType inventoryType;
+    ISlotData equipInventoryData;
+    [SerializeField] RectTransform slotsTransform;
+    private List<GameObject> slotPrefabList = new List<GameObject>();
     private void Awake()
     {
-        equipInventorSlotData = GameData.instance.equipInventoryData;
+        equipInventoryData = GameData.instance.equipInventoryData;
+        inventoryType = InventoryType.EquipItemInventory;
+        CheckTransformChild(slotsTransform);
+        SetSlots();
     }
-    void SetEquipSlot()
+    void SetSlots()
     {
-        for(int i =0; i< equipSlots.Length; i++)
+        for (int i = 0; i < equipInventoryData.slotDatas.Count; i++)
         {
-            ItemSlotUI slotUI = equipSlots[i].GetComponent<ItemSlotUI>();
-            slotUI.dropSlot += ChangeEquipSlot;
+            ItemSlotUI slotUI = slotPrefabList[i].GetComponentInChildren<ItemSlotUI>();
+            DragSlotUI[] dragSlotUi = slotUI.GetComponentsInChildren<DragSlotUI>();
+            if (slotUI != null)
+            {
+                slotUI.SetData(equipInventoryData.slotDatas[i], equipInventoryData, equipInventoryData.slotDatas[i].item.type, inventoryType);
+            }
+            if (dragSlotUi != null)
+            {
+                dragSlotUi[0].SetData(equipInventoryData.slotDatas[i], equipInventoryData, equipInventoryData.slotDatas[i].item.type, inventoryType);
+            }
         }
     }
-    void ChangeEquipSlot(SlotData data)
+    void CheckTransformChild(RectTransform parent)
     {
-
+        for(int i =0; i<parent.childCount; i++)
+        {
+            slotPrefabList.Add(parent.GetChild(i).gameObject);
+        }
     }
     public void ClosePopupUI()
     {

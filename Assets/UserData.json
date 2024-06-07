@@ -11,7 +11,21 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 2
+            },
+            {
+                "item": {
+                    "iconPath": "Weapon/Sword1",
+                    "name": "기초 무기",
+                    "description": "공격력 100을 증가시킵니다.",
+                    "type": 1,
+                    "coolDown": 0,
+                    "requiredLV": 1
+                },
+                "count": 1,
+                "maxCount": 99,
+                "itemType": 1
             },
             {
                 "item": {
@@ -23,43 +37,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
-            },
-            {
-                "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
-                },
-                "count": 0,
-                "maxCount": 99
-            },
-            {
-                "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
-                },
-                "count": 0,
-                "maxCount": 99
-            },
-            {
-                "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
-                },
-                "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -71,7 +50,8 @@
                     "requiredLV": 1
                 },
                 "count": 2,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 2
             },
             {
                 "item": {
@@ -83,7 +63,21 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
+            },
+            {
+                "item": {
+                    "iconPath": "Weapon/Sword1",
+                    "name": "기초 무기",
+                    "description": "공격력 100을 증가시킵니다.",
+                    "type": 1,
+                    "coolDown": 0,
+                    "requiredLV": 1
+                },
+                "count": 1,
+                "maxCount": 99,
+                "itemType": 1
             },
             {
                 "item": {
@@ -95,7 +89,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -107,7 +102,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -119,7 +115,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -131,7 +128,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 2
             },
             {
                 "item": {
@@ -143,7 +141,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -155,7 +154,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -167,7 +167,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -179,7 +180,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -191,7 +193,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -203,7 +206,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -215,7 +219,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -227,7 +232,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -239,7 +245,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -251,7 +258,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -263,7 +271,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -275,100 +284,9 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
-            {
-                "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
-                },
-                "count": 0,
-                "maxCount": 99
-            },
-            {
-                "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
-                },
-                "count": 0,
-                "maxCount": 99
-            },
-            {
-                "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
-                },
-                "count": 0,
-                "maxCount": 99
-            },
-            {
-                "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
-                },
-                "count": 0,
-                "maxCount": 99
-            },
-            {
-                "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
-                },
-                "count": 0,
-                "maxCount": 99
-            }
-        ]
-    },
-    "equipInventoryData": {
-        "_slotDatas": [
-            {
-                "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
-                },
-                "count": 0,
-                "maxCount": 99
-            },
-            {
-                "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
-                },
-                "count": 0,
-                "maxCount": 99
-            }
-        ]
-    },
-    "quickPortionSlotData": {
-        "_slotDatas": [
             {
                 "item": {
                     "iconPath": "Portion/HP2",
@@ -378,8 +296,91 @@
                     "coolDown": 5,
                     "requiredLV": 2
                 },
+                "count": 0,
+                "maxCount": 99,
+                "itemType": 2
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": 0,
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99,
+                "itemType": 0
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": 0,
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99,
+                "itemType": 0
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": 0,
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99,
+                "itemType": 0
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": 0,
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99,
+                "itemType": 0
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": 0,
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99,
+                "itemType": 0
+            }
+        ]
+    },
+    "equipInventoryData": {
+        "_slotDatas": [
+            {
+                "item": {
+                    "iconPath": "Weapon/Sword2",
+                    "name": "기본 무기",
+                    "description": "공격력 200을 증가시킵니다.",
+                    "type": 1,
+                    "coolDown": 0,
+                    "requiredLV": 2
+                },
                 "count": 1,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 1
             },
             {
                 "item": {
@@ -391,7 +392,38 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
+            }
+        ]
+    },
+    "quickPortionSlotData": {
+        "_slotDatas": [
+            {
+                "item": {
+                    "iconPath": "Portion/HP1",
+                    "name": "기초 HP 포션",
+                    "description": "체력이 100만큼 회복됩니다.",
+                    "type": 2,
+                    "coolDown": 5,
+                    "requiredLV": 1
+                },
+                "count": 0,
+                "maxCount": 99,
+                "itemType": 2
+            },
+            {
+                "item": {
+                    "iconPath": "Portion/HP1",
+                    "name": "기초 HP 포션",
+                    "description": "체력이 100만큼 회복됩니다.",
+                    "type": 2,
+                    "coolDown": 5,
+                    "requiredLV": 1
+                },
+                "count": 0,
+                "maxCount": 99,
+                "itemType": 2
             },
             {
                 "item": {
@@ -403,7 +435,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             }
         ]
     },
@@ -419,7 +452,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -431,7 +465,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -443,7 +478,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -455,7 +491,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -467,7 +504,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             }
         ]
     },
@@ -483,7 +521,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -495,7 +534,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -507,7 +547,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -519,7 +560,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -531,7 +573,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -543,7 +586,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -555,7 +599,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -567,7 +612,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 0
             }
         ]
     },
@@ -575,99 +621,107 @@
         "_slotDatas": [
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
+                    "iconPath": "Weapon/Sword1",
+                    "name": "기초 무기",
+                    "description": "공격력 100을 증가시킵니다.",
+                    "type": 1,
                     "coolDown": 0,
-                    "requiredLV": 0
+                    "requiredLV": 1
                 },
-                "count": 0,
-                "maxCount": 99
+                "count": 1,
+                "maxCount": 99,
+                "itemType": 1
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
+                    "iconPath": "Weapon/Sword2",
+                    "name": "기본 무기",
+                    "description": "공격력 200을 증가시킵니다.",
+                    "type": 1,
                     "coolDown": 0,
-                    "requiredLV": 0
+                    "requiredLV": 2
                 },
-                "count": 0,
-                "maxCount": 99
+                "count": 1,
+                "maxCount": 99,
+                "itemType": 1
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
+                    "iconPath": "Weapon/Sword3",
+                    "name": "중급 무기",
+                    "description": "공격력 300을 증가시킵니다.",
+                    "type": 1,
                     "coolDown": 0,
-                    "requiredLV": 0
+                    "requiredLV": 3
                 },
-                "count": 0,
-                "maxCount": 99
+                "count": 1,
+                "maxCount": 99,
+                "itemType": 1
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
+                    "iconPath": "Weapon/Sword4",
+                    "name": "고급 무기",
+                    "description": "공격력 400을 증가시킵니다.",
+                    "type": 1,
                     "coolDown": 0,
-                    "requiredLV": 0
+                    "requiredLV": 4
                 },
-                "count": 0,
-                "maxCount": 99
+                "count": 1,
+                "maxCount": 99,
+                "itemType": 1
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
+                    "iconPath": "Weapon/Shield1",
+                    "name": "기초 방패",
+                    "description": "체력 100을 증가시킵니다.",
                     "type": 0,
                     "coolDown": 0,
-                    "requiredLV": 0
+                    "requiredLV": 1
                 },
-                "count": 0,
-                "maxCount": 99
+                "count": 1,
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
+                    "iconPath": "Weapon/Shield2",
+                    "name": "기본 방패",
+                    "description": "체력 200을 증가시킵니다.",
                     "type": 0,
                     "coolDown": 0,
-                    "requiredLV": 0
+                    "requiredLV": 2
                 },
-                "count": 0,
-                "maxCount": 99
+                "count": 1,
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
+                    "iconPath": "Weapon/Shield3",
+                    "name": "중급 방패",
+                    "description": "체력 300을 증가시킵니다.",
                     "type": 0,
                     "coolDown": 0,
-                    "requiredLV": 0
+                    "requiredLV": 3
                 },
-                "count": 0,
-                "maxCount": 99
+                "count": 1,
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
+                    "iconPath": "Weapon/Shield4",
+                    "name": "고급 방패",
+                    "description": "체력 400을 증가시킵니다.",
                     "type": 0,
                     "coolDown": 0,
-                    "requiredLV": 0
+                    "requiredLV": 4
                 },
-                "count": 0,
-                "maxCount": 99
+                "count": 1,
+                "maxCount": 99,
+                "itemType": 0
             }
         ]
     },
@@ -683,7 +737,8 @@
                     "requiredLV": 1
                 },
                 "count": 1,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 2
             },
             {
                 "item": {
@@ -695,7 +750,8 @@
                     "requiredLV": 2
                 },
                 "count": 1,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 2
             },
             {
                 "item": {
@@ -707,7 +763,8 @@
                     "requiredLV": 3
                 },
                 "count": 1,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 2
             },
             {
                 "item": {
@@ -719,7 +776,8 @@
                     "requiredLV": 4
                 },
                 "count": 1,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 2
             },
             {
                 "item": {
@@ -731,7 +789,8 @@
                     "requiredLV": 1
                 },
                 "count": 1,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 2
             },
             {
                 "item": {
@@ -743,7 +802,8 @@
                     "requiredLV": 2
                 },
                 "count": 1,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 2
             },
             {
                 "item": {
@@ -755,7 +815,8 @@
                     "requiredLV": 3
                 },
                 "count": 1,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 2
             },
             {
                 "item": {
@@ -767,7 +828,8 @@
                     "requiredLV": 4
                 },
                 "count": 1,
-                "maxCount": 99
+                "maxCount": 99,
+                "itemType": 2
             }
         ]
     },

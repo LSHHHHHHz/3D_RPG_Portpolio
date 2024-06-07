@@ -257,6 +257,8 @@ MonoBehaviour:
   itemCountText: {fileID: 3331347566398435015}
   coolDownImage: {fileID: 0}
   infoPopupPrefab: {fileID: 5015931655141493773, guid: 40117ba4ac689f845b691d68e4969c3c, type: 3}
+  currentItemType: 0
+  currentInventoryType: 0
 --- !u!1 &3063245939313485698
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,5 +476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemIcon: {fileID: 1664236611383972488}
   nullImage: {fileID: 21300000, guid: 4f033cdd2b09f9a43b139729d09d002c, type: 3}
+  dragItemType: 0
+  dragInventoryType: 0
   previousParent: {fileID: 0}
   slotRectTransform: {fileID: 0}

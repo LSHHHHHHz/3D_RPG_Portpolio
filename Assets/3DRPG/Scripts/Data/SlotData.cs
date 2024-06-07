@@ -10,7 +10,9 @@ public class SlotData
     [SerializeField] public GameItemData item;
     [SerializeField] public int count;
     [SerializeField] public int maxCount = 99;
+    [SerializeField] public ItemType itemType;
     public event Action OnDataChanged;
+    public event Action<SlotData> OnSlotDataChanged;
     public void AddItem(GameItemData newItem, int newCount)
     {
         if (newItem == null || newCount <= 0)
@@ -20,6 +22,7 @@ public class SlotData
         {
             item = newItem;
             count = newCount;
+            itemType = newItem.type;
         }
         else
         {
@@ -30,16 +33,17 @@ public class SlotData
             }
         }
         OnDataChanged?.Invoke();
+        OnSlotDataChanged?.Invoke(this);
     }
     public void MergeItem(SlotData dropData, SlotData dragData)
     {
         dropData.count += dragData.count;
+        dropData.itemType = dragData.item.type;
         dragData.RemoveItem();
 
-
-        OnDataChanged?.Invoke();
         dropData.OnDataChanged?.Invoke();
         dragData.OnDataChanged?.Invoke();
+        OnSlotDataChanged?.Invoke(this);
     }
     public void UseItem(SlotData slot)
     {
@@ -49,27 +53,32 @@ public class SlotData
         }
         slot.count--;
         OnDataChanged?.Invoke();
+        OnSlotDataChanged?.Invoke(this);
     }
     public void RemoveItem()
     {
         item = new GameItemData();
         count = 0;
         OnDataChanged?.Invoke();
+        OnSlotDataChanged?.Invoke(this);
     }
     public void TempItem(SlotData dropData, SlotData dragData)
     {
         GameItemData tempItem = dragData.item;
         int tempCount = dragData.count;
+        ItemType tempType = dragData.item.type;
 
         dragData.item = dropData.item;
         dragData.count = dropData.count;
+        dragData.itemType = dropData.itemType;
 
         dropData.item = tempItem;
         dropData.count = tempCount;
+        dropData.itemType = tempType;
 
-        OnDataChanged?.Invoke();
         dropData.OnDataChanged?.Invoke();
         dragData.OnDataChanged?.Invoke();
+        OnSlotDataChanged?.Invoke(this);
     }
 }
 
@@ -119,7 +128,7 @@ public class QuickSkillSlotData : SlotDataInitialize
 {
     public QuickSkillSlotData()
     {
-        InitializeSlots(5);
+        InitializeSlots(6);
     }
 }
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -5,6 +6,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour, IActor
 {
+    public static Player instance;
     public bool isTalk = false;
     public GameObject scanObject { get; private set; }
     public PlayerStatusData playerStatusData { get; private set; }
@@ -16,6 +18,7 @@ public class Player : MonoBehaviour, IActor
     [SerializeField] PlayerUIManager playerStatusUI;
     private void Awake()
     {
+        instance = this;
         InitializedStatus();
     }
     private void Update()
@@ -29,8 +32,6 @@ public class Player : MonoBehaviour, IActor
             }
         }
     }
-    // 
-
     private void InitializedStatus()
     {
         playerStatusData = GameData.instance.playerData.playerStatusData;
@@ -96,6 +97,21 @@ public class Player : MonoBehaviour, IActor
         playerCurrencyData.ConsumeCoint(consumCoin);
         playerStatusUI.SetData(playerCurrencyData);
     } 
+    public void ClickQuickSlot(ISlotData slotData,ItemSlotUI itemSlot, int index)
+    {
+        if(slotData is QuickSkillSlotData quickSkill)
+        {
+
+        }
+        if(slotData is QuickPortionSlotData quickPortion && !itemSlot.isActiveCoolTime)
+        {
+            if(quickPortion.slotDatas[index].count>0)
+            {
+                itemSlot.CoolDown(quickPortion.slotDatas[index].item.coolDown);
+                quickPortion.slotDatas[index].UseItem(quickPortion.slotDatas[index]);
+            }
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("NPC"))

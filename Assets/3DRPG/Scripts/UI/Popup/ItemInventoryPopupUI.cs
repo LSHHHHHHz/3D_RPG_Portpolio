@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ItemInventoryPopupUI : MonoBehaviour,IPopup
 {
-    [SerializeField]InventoryType InventoryType;
+    [SerializeField]InventoryType inventoryType;
     ISlotData itemInventoryData;
     [SerializeField] RectTransform slotsTransform;
     [SerializeField] GameObject slotPrefab;
@@ -14,6 +14,7 @@ public class ItemInventoryPopupUI : MonoBehaviour,IPopup
     private void Awake()
     {
         itemInventoryData = GameData.instance.inventoryData;
+        inventoryType = InventoryType.ItemInventory;
         SetSlots();
         SetSlotInteractions(slotsTransform);
     }
@@ -30,11 +31,11 @@ public class ItemInventoryPopupUI : MonoBehaviour,IPopup
             DragSlotUI[] dragSlotUi = slotUI.GetComponentsInChildren<DragSlotUI>();
             if(slotUI != null)
             {
-                slotUI.SetData(itemInventoryData.slotDatas[i], itemInventoryData, itemInventoryData.slotDatas[i].item.type, InventoryType);;
+                slotUI.SetData(itemInventoryData.slotDatas[i], itemInventoryData, itemInventoryData.slotDatas[i].item.type, inventoryType);
             }
             if(dragSlotUi != null)
             {
-                dragSlotUi[0].SetData(itemInventoryData.slotDatas[i], itemInventoryData, slotUI.currentItemType,slotUI.currentInventoryType); 
+                dragSlotUi[0].SetData(itemInventoryData.slotDatas[i], itemInventoryData, itemInventoryData.slotDatas[i].item.type, inventoryType); 
             }
         }
     }
