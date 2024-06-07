@@ -10,6 +10,8 @@ public class Player : MonoBehaviour, IActor
     public PlayerStatusData playerStatusData { get; private set; }
     public PlayerProfileData playerProfileData { get; private set; }
     public PlayerCurrencyData playerCurrencyData { get; private set; }
+    public ISlotData quickSkillSlotData { get; private set; }
+    public ISlotData quickPortionSlotData { get; private set; }
 
     [SerializeField] PlayerUIManager playerStatusUI;
     private void Awake()
@@ -34,6 +36,8 @@ public class Player : MonoBehaviour, IActor
         playerStatusData = GameData.instance.playerData.playerStatusData;
         playerProfileData = GameData.instance.playerData.playerProfileData;
         playerCurrencyData = GameData.instance.playerData.playerCurrencyData;
+        quickSkillSlotData = GameData.instance.quickSkillSlotData;
+        quickPortionSlotData = GameData.instance.quickPortionSlotData;
         playerStatusUI.SetData(playerStatusData);
         playerStatusUI.SetData(playerProfileData);
         playerStatusUI.SetData(playerCurrencyData);
@@ -91,11 +95,7 @@ public class Player : MonoBehaviour, IActor
     {
         playerCurrencyData.ConsumeCoint(consumCoin);
         playerStatusUI.SetData(playerCurrencyData);
-    }
-
-    // NPC 감지하는 역할
-
-    // public class ActorScanner : Monobehavior 또는 NPCScanner : MonoBehaviour 
+    } 
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("NPC"))
@@ -110,5 +110,4 @@ public class Player : MonoBehaviour, IActor
             scanObject = null;
         }
     }
-    // 
 }

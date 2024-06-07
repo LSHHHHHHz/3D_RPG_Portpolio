@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ShopPopupUI : MonoBehaviour,IPopup
 {
+    InventoryType inventoryType;
     ISlotData shopData;
     GameItemData[] gameItemDatas;
     BuyPopup buyPopup;
@@ -26,10 +27,12 @@ public class ShopPopupUI : MonoBehaviour,IPopup
             case "포션":
                 shopData = GameData.instance.portionShopData;
                 gameItemDatas = GameData.instance.staticGameItemData.portionDatas.ToArray();
+                inventoryType = InventoryType.PortionShop;
                 break;
             case "장비":
                 shopData = GameData.instance.equipShopData;
                 gameItemDatas = GameData.instance.staticGameItemData.equipDatas.ToArray();
+                inventoryType = InventoryType.EquipShop;
                 break;
         }
     }
@@ -46,7 +49,7 @@ public class ShopPopupUI : MonoBehaviour,IPopup
             ItemSlotUI slotUI = slotPrefabList[i].GetComponentInChildren<ItemSlotUI>();
             if (slotUI != null)
             {
-                slotUI.SetData(shopData.slotDatas[i],shopData);
+                slotUI.SetData(shopData.slotDatas[i], shopData, shopData.slotDatas[i].item.type, inventoryType);
             }
         }
     }

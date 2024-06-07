@@ -31,6 +31,16 @@ public class SlotData
         }
         OnDataChanged?.Invoke();
     }
+    public void MergeItem(SlotData dropData, SlotData dragData)
+    {
+        dropData.count += dragData.count;
+        dragData.RemoveItem();
+
+
+        OnDataChanged?.Invoke();
+        dropData.OnDataChanged?.Invoke();
+        dragData.OnDataChanged?.Invoke();
+    }
     public void UseItem(SlotData slot)
     {
         if(slot.item == null || slot.count<=0) 
@@ -58,8 +68,8 @@ public class SlotData
         dropData.count = tempCount;
 
         OnDataChanged?.Invoke();
-       // dropData.OnDataChanged?.Invoke();
-       // dragData.OnDataChanged?.Invoke();
+        dropData.OnDataChanged?.Invoke();
+        dragData.OnDataChanged?.Invoke();
     }
 }
 

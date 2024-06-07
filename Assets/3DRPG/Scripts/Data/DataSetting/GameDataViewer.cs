@@ -21,6 +21,10 @@ public class GameDataViewer : MonoBehaviour
         data = GameData.instance;
         data.Load();
     }
+    private void Start()
+    {
+        data.monsterData.InitializeMonsters();
+    }
     private void OnDisable()
     {
         data.Save();

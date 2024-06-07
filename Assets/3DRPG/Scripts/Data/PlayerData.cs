@@ -44,6 +44,7 @@ public class PlayerStatusData
         this.lvUpEXP = lvUpEXP;
     }
 }
+[System.Serializable]
 public class PlayerProfileData
 {
     [SerializeField] public string playerName;
@@ -64,6 +65,7 @@ public class PlayerProfileData
         this.iconPath = iconPath;
     }
 }
+[System.Serializable]
 public class PlayerCurrencyData
 {
     [SerializeField]public int coin;

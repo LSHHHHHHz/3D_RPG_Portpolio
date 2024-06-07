@@ -9,10 +9,21 @@ public enum ItemType
 {
     Shield,
     Weapon,
+    Portion,
+    Skill
+}
+public enum InventoryType
+{
+    ItemInventory,
+    EquipItemInventory,
+    QuickPortionSlot,
+    PortionShop,
+    EquipShop,
+    SkillInventory,
+    QuickSkillSlot
 }
 
-
-public class ItemSlotUI : MonoBehaviour, IDropHandler, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerExitHandler, IPointerEnterHandler
+public class ItemSlotUI : MonoBehaviour, IDropHandler, IPointerExitHandler, IPointerEnterHandler
 {
     [SerializeField] Image itemIcon;
     [SerializeField] Text description;
@@ -23,32 +34,21 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IBeginDragHandler, IDragH
     [SerializeField] Image coolDownImage;
 
     [SerializeField] GameObject infoPopupPrefab;
+    public ItemType currentItemType { get; private set; }
+    public InventoryType currentInventoryType { get; private set; }
     public bool isActiveCoolTime { get; private set; }
     public SlotData currentSlotData { get; private set; }
     public ISlotData currentISlot { get; private set; }
 
-    //드래그앤드랍
-    Transform canvas;
-    RectTransform rect;
-    CanvasGroup canvasGroup;
-    [SerializeField] Transform previousParent;
-    [SerializeField] RectTransform slotRectTransform;
-
-    static SlotData dragSlotData;
-    static ISlotData dragISlotData;
     InfoPopup infoPopup;
     public Action<SlotData> endDragSlot { get; set; } = null;
     public Action<SlotData> dropSlot { get; set; } = null;
-    private void Awake()
-    {
-        canvas = FindObjectOfType<Canvas>().transform;
-        rect = GetComponent<RectTransform>();
-        canvasGroup = GetComponent<CanvasGroup>();
-    }
-    public void SetData(SlotData slotData, ISlotData islotData)
+    public void SetData(SlotData slotData, ISlotData islotData, ItemType itemType, InventoryType inventoryType)
     {
         this.currentSlotData = slotData;
         this.currentISlot = islotData;
+        this.currentItemType = itemType;
+        this.currentInventoryType = inventoryType;
         UpdateSlotUI();
         currentSlotData.OnDataChanged += UpdateSlotUI;
     }
@@ -97,7 +97,6 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IBeginDragHandler, IDragH
             }
         }
     }
-
     public void CoolDown(int coolTime)
     {
         if (coolDownImage != null)
@@ -122,50 +121,25 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IBeginDragHandler, IDragH
     }
     public void OnDrop(PointerEventData eventData)
     {
-        if (currentSlotData.item.name == dragSlotData.item.name)
+        if (CheckPossibleDrop(currentInventoryType, currentItemType))
         {
-            currentSlotData.AddItem(currentSlotData.item, dragSlotData.count);
-            dragSlotData.RemoveItem();
-        }
-        else
-        {
-            currentSlotData.TempItem(currentSlotData, dragSlotData);
-        }
-        dragSlotData = null;
-        currentISlot = null;
-    }
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        if (currentISlot is PortionShopData || currentISlot is EquipShopData)
-        {
-            return;
-        }
-
-        dragSlotData = currentSlotData;
-        dragISlotData = currentISlot;
-
-        previousParent = transform.parent;
-        transform.SetParent(canvas);
-        transform.SetAsLastSibling();
-        canvasGroup.alpha = 0.6f;
-        canvasGroup.blocksRaycasts = false;
-    }
-    public void OnDrag(PointerEventData eventData)
-    {
-    }
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        if (transform.parent == canvas)
-        {
-            transform.SetParent(previousParent);
-            rect.position = previousParent.GetComponent<RectTransform>().position;
-            if (!RectTransformUtility.RectangleContainsScreenPoint(slotRectTransform, eventData.position, null))
+            ScrollRect scroll = eventData.pointerDrag.GetComponent<ScrollRect>();
+            if (scroll != null)
             {
-
+                return;
             }
+            
+            DragSlotUI dragSlotUI = eventData.pointerDrag.GetComponent<DragSlotUI>();
+            if (currentSlotData.item.name != dragSlotUI.dragSlotData.item.name)
+            {
+                currentSlotData.TempItem(currentSlotData, dragSlotUI.dragSlotData);
+            }
+            else
+            {
+                currentSlotData.MergeItem(currentSlotData, dragSlotUI.dragSlotData);
+            }
+            dragSlotUI.UpdateSlotUI();
         }
-        canvasGroup.alpha = 1.0f;
-        canvasGroup.blocksRaycasts = true;
     }
     public void OnPointerExit(PointerEventData eventData)
     {
@@ -192,6 +166,24 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IBeginDragHandler, IDragH
         else
         {
             return;
+        }
+    }
+    bool CheckPossibleDrop(InventoryType dropInventoryType, ItemType dragitemType)
+    {
+        switch(dropInventoryType)
+        {
+            case InventoryType.ItemInventory:
+                return dragitemType != ItemType.Skill;
+            case InventoryType.EquipItemInventory:
+                return dragitemType == ItemType.Weapon || dragitemType == ItemType.Shield;    
+            case InventoryType.QuickPortionSlot:
+                return dragitemType == ItemType.Portion;
+            case InventoryType.SkillInventory:
+                return false;
+            case InventoryType.QuickSkillSlot:
+                return dragitemType == ItemType.Skill;
+            default:
+                return false;
         }
     }
 }

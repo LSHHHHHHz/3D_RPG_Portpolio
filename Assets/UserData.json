@@ -6,7 +6,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -18,7 +18,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -30,7 +30,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -42,7 +42,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -54,7 +54,31 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "Portion/HP1",
+                    "name": "기초 HP 포션",
+                    "description": "체력이 100만큼 회복됩니다.",
+                    "type": 2,
+                    "coolDown": 5,
+                    "requiredLV": 1
+                },
+                "count": 2,
+                "maxCount": 99
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -66,7 +90,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -78,7 +102,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -90,7 +114,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -102,7 +126,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -114,7 +138,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -126,7 +150,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -138,7 +162,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -150,7 +174,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -162,7 +186,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -174,7 +198,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -186,7 +210,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -198,7 +222,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -210,7 +234,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -222,7 +246,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -234,7 +258,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -246,7 +270,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -258,7 +282,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -270,7 +294,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -282,7 +306,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -294,7 +318,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -306,31 +330,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
-                    "coolDown": 0,
-                    "requiredLV": 0
-                },
-                "count": 0,
-                "maxCount": 99
-            },
-            {
-                "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": "",
-                    "coolDown": 0,
-                    "requiredLV": 0
-                },
-                "count": 0,
-                "maxCount": 99
-            },
-            {
-                "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -346,7 +346,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -358,7 +358,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -371,10 +371,22 @@
         "_slotDatas": [
             {
                 "item": {
+                    "iconPath": "Portion/HP2",
+                    "name": "기본 HP 포션",
+                    "description": "체력이 300만큼 회복됩니다.",
+                    "type": 2,
+                    "coolDown": 5,
+                    "requiredLV": 2
+                },
+                "count": 1,
+                "maxCount": 99
+            },
+            {
+                "item": {
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -386,7 +398,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -402,7 +414,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -414,7 +426,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -426,7 +438,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -438,7 +450,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -450,7 +462,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -466,7 +478,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -478,7 +490,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -490,7 +502,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -502,7 +514,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -514,7 +526,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -526,7 +538,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -538,7 +550,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -550,7 +562,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -566,7 +578,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -578,7 +590,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -590,7 +602,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -602,7 +614,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -614,7 +626,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -626,7 +638,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -638,7 +650,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -650,7 +662,7 @@
                     "iconPath": "",
                     "name": "",
                     "description": "",
-                    "type": "",
+                    "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
                 },
@@ -663,98 +675,98 @@
         "_slotDatas": [
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": "",
-                    "coolDown": 0,
-                    "requiredLV": 0
+                    "iconPath": "Portion/HP1",
+                    "name": "기초 HP 포션",
+                    "description": "체력이 100만큼 회복됩니다.",
+                    "type": 2,
+                    "coolDown": 5,
+                    "requiredLV": 1
                 },
-                "count": 0,
+                "count": 1,
                 "maxCount": 99
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": "",
-                    "coolDown": 0,
-                    "requiredLV": 0
+                    "iconPath": "Portion/HP2",
+                    "name": "기본 HP 포션",
+                    "description": "체력이 300만큼 회복됩니다.",
+                    "type": 2,
+                    "coolDown": 5,
+                    "requiredLV": 2
                 },
-                "count": 0,
+                "count": 1,
                 "maxCount": 99
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": "",
-                    "coolDown": 0,
-                    "requiredLV": 0
+                    "iconPath": "Portion/HP3",
+                    "name": "중급 HP 포션",
+                    "description": "체력이 500만큼 회복됩니다.",
+                    "type": 2,
+                    "coolDown": 5,
+                    "requiredLV": 3
                 },
-                "count": 0,
+                "count": 1,
                 "maxCount": 99
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": "",
-                    "coolDown": 0,
-                    "requiredLV": 0
+                    "iconPath": "Portion/HP4",
+                    "name": "고급 HP 포션",
+                    "description": "체력이 1000만큼 회복됩니다.",
+                    "type": 2,
+                    "coolDown": 5,
+                    "requiredLV": 4
                 },
-                "count": 0,
+                "count": 1,
                 "maxCount": 99
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": "",
-                    "coolDown": 0,
-                    "requiredLV": 0
+                    "iconPath": "Portion/MP1",
+                    "name": "기초 MP 포션",
+                    "description": "마력이 10만큼 회복됩니다.",
+                    "type": 2,
+                    "coolDown": 5,
+                    "requiredLV": 1
                 },
-                "count": 0,
+                "count": 1,
                 "maxCount": 99
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": "",
-                    "coolDown": 0,
-                    "requiredLV": 0
+                    "iconPath": "Portion/MP2",
+                    "name": "기본 MP 포션",
+                    "description": "마력이 30만큼 회복됩니다.",
+                    "type": 2,
+                    "coolDown": 5,
+                    "requiredLV": 2
                 },
-                "count": 0,
+                "count": 1,
                 "maxCount": 99
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": "",
-                    "coolDown": 0,
-                    "requiredLV": 0
+                    "iconPath": "Portion/MP3",
+                    "name": "중급 MP 포션",
+                    "description": "마력이 50만큼 회복됩니다.",
+                    "type": 2,
+                    "coolDown": 5,
+                    "requiredLV": 3
                 },
-                "count": 0,
+                "count": 1,
                 "maxCount": 99
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": "",
-                    "coolDown": 0,
-                    "requiredLV": 0
+                    "iconPath": "Portion/MP4",
+                    "name": "고급 MP 포션",
+                    "description": "마력이 100만큼 회복됩니다.",
+                    "type": 2,
+                    "coolDown": 5,
+                    "requiredLV": 4
                 },
-                "count": 0,
+                "count": 1,
                 "maxCount": 99
             }
         ]
@@ -771,7 +783,95 @@
             "lvUpHP": 100,
             "lvUpMP": 50,
             "lvUpEXP": 100
+        },
+        "playerProfileData": {
+            "playerName": "이승훈g",
+            "iconPath": "아직"
+        },
+        "playerCurrencyData": {
+            "coin": 5000
         }
     },
-    "monsterData": {}
+    "monsterData": {
+        "monsterID": [
+            "Monster1",
+            "Monster2",
+            "Monster3"
+        ],
+        "monsterStatusDatas": [
+            {
+                "maxHP": 100,
+                "currentHP": 100,
+                "maxMP": 0,
+                "currentMP": 0,
+                "damage": 10
+            },
+            {
+                "maxHP": 100,
+                "currentHP": 100,
+                "maxMP": 0,
+                "currentMP": 0,
+                "damage": 10
+            },
+            {
+                "maxHP": 100,
+                "currentHP": 100,
+                "maxMP": 0,
+                "currentMP": 0,
+                "damage": 10
+            }
+        ],
+        "monsterProfileDatas": [
+            {
+                "monsterName": "Monster1",
+                "prefabPath": "아직"
+            },
+            {
+                "monsterName": "Monster2",
+                "prefabPath": "아직"
+            },
+            {
+                "monsterName": "Monster3",
+                "prefabPath": "아직"
+            }
+        ],
+        "monsterRewardDatas": [
+            {
+                "rewardItem": {
+                    "iconPath": "Portion/HP1",
+                    "name": "기초 HP 포션",
+                    "description": "체력이 100만큼 회복됩니다.",
+                    "type": 2,
+                    "coolDown": 5,
+                    "requiredLV": 1
+                },
+                "rewardCoin": 100,
+                "rewardExp": 50
+            },
+            {
+                "rewardItem": {
+                    "iconPath": "Portion/HP1",
+                    "name": "기초 HP 포션",
+                    "description": "체력이 100만큼 회복됩니다.",
+                    "type": 2,
+                    "coolDown": 5,
+                    "requiredLV": 1
+                },
+                "rewardCoin": 100,
+                "rewardExp": 50
+            },
+            {
+                "rewardItem": {
+                    "iconPath": "Portion/HP1",
+                    "name": "기초 HP 포션",
+                    "description": "체력이 100만큼 회복됩니다.",
+                    "type": 2,
+                    "coolDown": 5,
+                    "requiredLV": 1
+                },
+                "rewardCoin": 100,
+                "rewardExp": 50
+            }
+        ]
+    }
 }

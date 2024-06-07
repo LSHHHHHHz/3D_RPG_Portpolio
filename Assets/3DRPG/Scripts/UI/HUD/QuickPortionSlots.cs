@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class QuickPortionSlots : MonoBehaviour
 {
     ISlotData portionSlotData;
+    InventoryType inventoryType;
     [SerializeField] private RectTransform slotsTransform;
     [SerializeField] private GameObject slotPrefab;
     private List<GameObject> slotPrefabList = new List<GameObject>();
@@ -14,6 +15,7 @@ public class QuickPortionSlots : MonoBehaviour
     private void Awake()
     {
         portionSlotData = GameData.instance.quickPortionSlotData;
+        inventoryType = InventoryType.QuickPortionSlot;
         SetSlots();
         SetSlotInteractions(slotsTransform);
     }
@@ -29,7 +31,7 @@ public class QuickPortionSlots : MonoBehaviour
             ItemSlotUI itemSlotUI = slotPrefabList[i].GetComponentInChildren<ItemSlotUI>();
             if (itemSlotUI != null)
             {
-                itemSlotUI.SetData(portionSlotData.slotDatas[i], portionSlotData);
+                itemSlotUI.SetData(portionSlotData.slotDatas[i], portionSlotData, portionSlotData.slotDatas[i].item.type,inventoryType);
             }
         }
     }

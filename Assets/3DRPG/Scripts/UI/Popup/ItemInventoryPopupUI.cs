@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ItemInventoryPopupUI : MonoBehaviour,IPopup
 {
+    [SerializeField]InventoryType InventoryType;
     ISlotData itemInventoryData;
     [SerializeField] RectTransform slotsTransform;
     [SerializeField] GameObject slotPrefab;
@@ -26,9 +27,14 @@ public class ItemInventoryPopupUI : MonoBehaviour,IPopup
         for(int i =0; i< itemInventoryData.slotDatas.Count; i++ )
         {
             ItemSlotUI slotUI = slotPrefabList[i].GetComponentInChildren<ItemSlotUI>();
+            DragSlotUI[] dragSlotUi = slotUI.GetComponentsInChildren<DragSlotUI>();
             if(slotUI != null)
             {
-                slotUI.SetData(itemInventoryData.slotDatas[i], itemInventoryData);
+                slotUI.SetData(itemInventoryData.slotDatas[i], itemInventoryData, itemInventoryData.slotDatas[i].item.type, InventoryType);;
+            }
+            if(dragSlotUi != null)
+            {
+                dragSlotUi[0].SetData(itemInventoryData.slotDatas[i], itemInventoryData, slotUI.currentItemType,slotUI.currentInventoryType); 
             }
         }
     }

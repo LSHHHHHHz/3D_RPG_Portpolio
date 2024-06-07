@@ -1,75 +1,74 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Dynamic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DragSlotUI : MonoBehaviour,  IBeginDragHandler
+public class DragSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [SerializeField] Image itemIcon;
     [SerializeField] Sprite nullImage;
-    [SerializeField] Text itemCountText;
-    public SlotData currentSlotData { get; private set; }
-    public ISlotData currentISlot { get; private set; }
+
+    public ItemType dragItemType { get; private set; }
+    [SerializeField]public InventoryType dragInventoryType { get; private set; }
+    [SerializeField] public SlotData dragSlotData { get; private set; }
+    public ISlotData dragISlotData { get; private set; }
 
     //드래그앤드랍
     Transform canvas;
     RectTransform rect;
     CanvasGroup canvasGroup;
+
     [SerializeField] Transform previousParent;
     [SerializeField] RectTransform slotRectTransform;
+    public Action initializeSlot { get; private set; } = null;
     public Action<SlotData> endDragSlot { get; set; } = null;
     public Action<SlotData> dropSlot { get; set; } = null;
+    public bool isDragging { get; private set; } = false;
     private void Awake()
     {
-        canvas = FindObjectOfType<Canvas>().transform;
+        GameObject canvasObj = GameObject.Find("MainCanvas");
+        if (canvasObj != null)
+        {
+            canvas = GameObject.Find("MainCanvas").GetComponent<Canvas>().transform;
+        }
         rect = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
     }
-    public void SetData(SlotData slotData, ISlotData islotData)
+    public void SetData(SlotData slotData, ISlotData islotData, ItemType itemType, InventoryType inventoryType)
     {
-        this.currentSlotData = slotData;
-        this.currentISlot = islotData;
+        this.dragSlotData = slotData;
+        this.dragISlotData = islotData;
+        this.dragItemType = itemType;
+        this.dragInventoryType= inventoryType;
         UpdateSlotUI();
-        currentSlotData.OnDataChanged += UpdateSlotUI;
+        dragSlotData.OnDataChanged += UpdateSlotUI;
     }
-    void UpdateSlotUI()
+    public void UpdateSlotUI()
     {
         if (itemIcon != null)
         {
-            if (currentSlotData.item != null && currentSlotData.item.name != null)
+            if (dragSlotData.item != null && dragSlotData.item.name != null)
             {
-                itemIcon.sprite = Resources.Load<Sprite>(currentSlotData.item.iconPath);
+                itemIcon.sprite = Resources.Load<Sprite>(dragSlotData.item.iconPath);
             }
-            if (currentSlotData.item == null || currentSlotData.item.name == "" || currentSlotData.count == 0)
+            if (dragSlotData.item == null || dragSlotData.item.name == "" || dragSlotData.count == 0)
             {
                 itemIcon.sprite = nullImage;
-            }
-        }
-        if (itemCountText != null)
-        {
-            if (currentSlotData.count > 0)
-            {
-                itemCountText.text = currentSlotData.count.ToString();
-                itemCountText.gameObject.SetActive(true);
-            }
-            else
-            {
-                itemCountText.gameObject.SetActive(false);
             }
         }
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (currentISlot is PortionShopData || currentISlot is EquipShopData)
+        if (dragSlotData == null || itemIcon.sprite == nullImage)
         {
+            isDragging = false;
             return;
         }
-
-        dragSlotData = currentSlotData;
-        dragISlotData = currentISlot;
-
+        isDragging = true;
         previousParent = transform.parent;
         transform.SetParent(canvas);
         transform.SetAsLastSibling();
@@ -78,18 +77,22 @@ public class DragSlotUI : MonoBehaviour,  IBeginDragHandler
     }
     public void OnDrag(PointerEventData eventData)
     {
+        if (!isDragging)
+        {
+            return;
+        }
+        rect.position = eventData.position;
     }
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (transform.parent == canvas)
+        if (!isDragging)
         {
-            transform.SetParent(previousParent);
-            rect.position = previousParent.GetComponent<RectTransform>().position;
-            if (!RectTransformUtility.RectangleContainsScreenPoint(slotRectTransform, eventData.position, null))
-            {
-
-            }
+            return; 
         }
+
+        isDragging = false;
+        transform.SetParent(previousParent);
+        rect.position = previousParent.GetComponent<RectTransform>().position;
         canvasGroup.alpha = 1.0f;
         canvasGroup.blocksRaycasts = true;
     }
