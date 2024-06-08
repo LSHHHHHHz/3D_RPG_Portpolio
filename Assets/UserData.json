@@ -16,19 +16,6 @@
             },
             {
                 "item": {
-                    "iconPath": "Weapon/Sword1",
-                    "name": "기초 무기",
-                    "description": "공격력 100을 증가시킵니다.",
-                    "type": 1,
-                    "coolDown": 0,
-                    "requiredLV": 1
-                },
-                "count": 1,
-                "maxCount": 99,
-                "itemType": 1
-            },
-            {
-                "item": {
                     "iconPath": "",
                     "name": "",
                     "description": "",
@@ -37,34 +24,8 @@
                     "requiredLV": 0
                 },
                 "count": 0,
-                "maxCount": 99,
-                "itemType": 0
-            },
-            {
-                "item": {
-                    "iconPath": "Portion/HP1",
-                    "name": "기초 HP 포션",
-                    "description": "체력이 100만큼 회복됩니다.",
-                    "type": 2,
-                    "coolDown": 5,
-                    "requiredLV": 1
-                },
-                "count": 2,
                 "maxCount": 99,
                 "itemType": 2
-            },
-            {
-                "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
-                },
-                "count": 0,
-                "maxCount": 99,
-                "itemType": 0
             },
             {
                 "item": {
@@ -103,6 +64,97 @@
                 },
                 "count": 0,
                 "maxCount": 99,
+                "itemType": 2
+            },
+            {
+                "item": {
+                    "iconPath": "Weapon/Sword1",
+                    "name": "기초 무기",
+                    "description": "공격력 100을 증가시킵니다.",
+                    "type": 1,
+                    "coolDown": 0,
+                    "requiredLV": 1
+                },
+                "count": 1,
+                "maxCount": 99,
+                "itemType": 1
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": 0,
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99,
+                "itemType": 0
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": 0,
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99,
+                "itemType": 2
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": 0,
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99,
+                "itemType": 2
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": 0,
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99,
+                "itemType": 0
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": 0,
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99,
+                "itemType": 0
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": 0,
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99,
                 "itemType": 0
             },
             {
@@ -181,7 +233,7 @@
                 },
                 "count": 0,
                 "maxCount": 99,
-                "itemType": 0
+                "itemType": 2
             },
             {
                 "item": {
@@ -191,114 +243,62 @@
                     "type": 0,
                     "coolDown": 0,
                     "requiredLV": 0
-                },
-                "count": 0,
-                "maxCount": 99,
-                "itemType": 0
-            },
-            {
-                "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
-                },
-                "count": 0,
-                "maxCount": 99,
-                "itemType": 0
-            },
-            {
-                "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
-                },
-                "count": 0,
-                "maxCount": 99,
-                "itemType": 0
-            },
-            {
-                "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
-                },
-                "count": 0,
-                "maxCount": 99,
-                "itemType": 0
-            },
-            {
-                "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
-                },
-                "count": 0,
-                "maxCount": 99,
-                "itemType": 0
-            },
-            {
-                "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
-                },
-                "count": 0,
-                "maxCount": 99,
-                "itemType": 0
-            },
-            {
-                "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
-                },
-                "count": 0,
-                "maxCount": 99,
-                "itemType": 0
-            },
-            {
-                "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
-                },
-                "count": 0,
-                "maxCount": 99,
-                "itemType": 0
-            },
-            {
-                "item": {
-                    "iconPath": "Portion/HP2",
-                    "name": "기본 HP 포션",
-                    "description": "체력이 300만큼 회복됩니다.",
-                    "type": 2,
-                    "coolDown": 5,
-                    "requiredLV": 2
                 },
                 "count": 0,
                 "maxCount": 99,
                 "itemType": 2
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": 0,
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99,
+                "itemType": 0
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": 0,
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99,
+                "itemType": 0
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": 0,
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99,
+                "itemType": 0
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": 0,
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99,
+                "itemType": 0
             },
             {
                 "item": {
@@ -408,20 +408,7 @@
                     "coolDown": 5,
                     "requiredLV": 1
                 },
-                "count": 0,
-                "maxCount": 99,
-                "itemType": 2
-            },
-            {
-                "item": {
-                    "iconPath": "Portion/HP1",
-                    "name": "기초 HP 포션",
-                    "description": "체력이 100만큼 회복됩니다.",
-                    "type": 2,
-                    "coolDown": 5,
-                    "requiredLV": 1
-                },
-                "count": 0,
+                "count": 3,
                 "maxCount": 99,
                 "itemType": 2
             },
@@ -437,6 +424,19 @@
                 "count": 0,
                 "maxCount": 99,
                 "itemType": 0
+            },
+            {
+                "item": {
+                    "iconPath": "",
+                    "name": "",
+                    "description": "",
+                    "type": 0,
+                    "coolDown": 0,
+                    "requiredLV": 0
+                },
+                "count": 0,
+                "maxCount": 99,
+                "itemType": 2
             }
         ]
     },
@@ -444,68 +444,81 @@
         "_slotDatas": [
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
+                    "iconPath": "SkillIcon/Skill6",
+                    "name": "이모탈",
+                    "description": " 이동속도를 크게 증가시킨다.\n 쿨다운 10초",
+                    "type": 3,
+                    "coolDown": 10,
+                    "requiredLV": 6
                 },
-                "count": 0,
-                "maxCount": 99,
-                "itemType": 0
+                "count": 1,
+                "maxCount": 0,
+                "itemType": 3
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
+                    "iconPath": "SkillIcon/Skill1",
+                    "name": "벽력일섬",
+                    "description": " 20거리 내에 있는 적을 향해 순식간에 이동하여 적의 급소를 벤다.\n 쿨다운 10초",
+                    "type": 3,
+                    "coolDown": 10,
+                    "requiredLV": 1
                 },
                 "count": 0,
-                "maxCount": 99,
-                "itemType": 0
+                "maxCount": 0,
+                "itemType": 3
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
+                    "iconPath": "SkillIcon/Skill5",
+                    "name": "유성",
+                    "description": " 하늘에서 10개의 유성이 떨어진다.\n 쿨다운 10초",
+                    "type": 3,
+                    "coolDown": 10,
+                    "requiredLV": 5
                 },
                 "count": 0,
-                "maxCount": 99,
-                "itemType": 0
+                "maxCount": 0,
+                "itemType": 3
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
+                    "iconPath": "SkillIcon/Skill7",
+                    "name": "쿠로",
+                    "description": " 체력을 모두 회복한다.\n 쿨다운 10초",
+                    "type": 3,
+                    "coolDown": 10,
+                    "requiredLV": 7
                 },
                 "count": 0,
-                "maxCount": 99,
-                "itemType": 0
+                "maxCount": 0,
+                "itemType": 3
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
+                    "iconPath": "SkillIcon/Skill3",
+                    "name": "데스빔",
+                    "description": " 범위 내 적에게 무작위로 레이저를 발사한다. 이후 적에게 적중하면 큰 폭팔이 발생한다.\n 쿨다운 10초",
+                    "type": 3,
+                    "coolDown": 10,
+                    "requiredLV": 3
                 },
                 "count": 0,
-                "maxCount": 99,
-                "itemType": 0
+                "maxCount": 0,
+                "itemType": 3
+            },
+            {
+                "item": {
+                    "iconPath": "SkillIcon/Skill4",
+                    "name": "크래쉬",
+                    "description": " 범위 내에 모든 적을 공격한다.\n 쿨다운 10초",
+                    "type": 3,
+                    "coolDown": 10,
+                    "requiredLV": 4
+                },
+                "count": 0,
+                "maxCount": 0,
+                "itemType": 3
             }
         ]
     },
@@ -513,107 +526,94 @@
         "_slotDatas": [
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
+                    "iconPath": "SkillIcon/Skill1",
+                    "name": "벽력일섬",
+                    "description": " 20거리 내에 있는 적을 향해 순식간에 이동하여 적의 급소를 벤다.\n 쿨다운 10초",
+                    "type": 3,
+                    "coolDown": 10,
+                    "requiredLV": 1
                 },
-                "count": 0,
+                "count": 1,
                 "maxCount": 99,
-                "itemType": 0
+                "itemType": 3
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
+                    "iconPath": "SkillIcon/Skill2",
+                    "name": "원기옥",
+                    "description": " 응축된 힘으로 적을 증발시킨다..\n 쿨다운 10초",
+                    "type": 3,
+                    "coolDown": 10,
+                    "requiredLV": 2
                 },
-                "count": 0,
+                "count": 1,
                 "maxCount": 99,
-                "itemType": 0
+                "itemType": 3
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
+                    "iconPath": "SkillIcon/Skill3",
+                    "name": "데스빔",
+                    "description": " 범위 내 적에게 무작위로 레이저를 발사한다. 이후 적에게 적중하면 큰 폭팔이 발생한다.\n 쿨다운 10초",
+                    "type": 3,
+                    "coolDown": 10,
+                    "requiredLV": 3
                 },
-                "count": 0,
+                "count": 1,
                 "maxCount": 99,
-                "itemType": 0
+                "itemType": 3
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
+                    "iconPath": "SkillIcon/Skill4",
+                    "name": "크래쉬",
+                    "description": " 범위 내에 모든 적을 공격한다.\n 쿨다운 10초",
+                    "type": 3,
+                    "coolDown": 10,
+                    "requiredLV": 4
                 },
-                "count": 0,
+                "count": 1,
                 "maxCount": 99,
-                "itemType": 0
+                "itemType": 3
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
+                    "iconPath": "SkillIcon/Skill5",
+                    "name": "유성",
+                    "description": " 하늘에서 10개의 유성이 떨어진다.\n 쿨다운 10초",
+                    "type": 3,
+                    "coolDown": 10,
+                    "requiredLV": 5
                 },
-                "count": 0,
+                "count": 1,
                 "maxCount": 99,
-                "itemType": 0
+                "itemType": 3
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
+                    "iconPath": "SkillIcon/Skill6",
+                    "name": "이모탈",
+                    "description": " 이동속도를 크게 증가시킨다.\n 쿨다운 10초",
+                    "type": 3,
+                    "coolDown": 10,
+                    "requiredLV": 6
                 },
-                "count": 0,
+                "count": 1,
                 "maxCount": 99,
-                "itemType": 0
+                "itemType": 3
             },
             {
                 "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
+                    "iconPath": "SkillIcon/Skill7",
+                    "name": "쿠로",
+                    "description": " 체력을 모두 회복한다.\n 쿨다운 10초",
+                    "type": 3,
+                    "coolDown": 10,
+                    "requiredLV": 7
                 },
-                "count": 0,
+                "count": 1,
                 "maxCount": 99,
-                "itemType": 0
-            },
-            {
-                "item": {
-                    "iconPath": "",
-                    "name": "",
-                    "description": "",
-                    "type": 0,
-                    "coolDown": 0,
-                    "requiredLV": 0
-                },
-                "count": 0,
-                "maxCount": 99,
-                "itemType": 0
+                "itemType": 3
             }
         ]
     },

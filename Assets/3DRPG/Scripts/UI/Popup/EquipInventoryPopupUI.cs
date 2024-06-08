@@ -20,7 +20,7 @@ public class EquipInventoryPopupUI : MonoBehaviour,IPopup
     {
         for (int i = 0; i < equipInventoryData.slotDatas.Count; i++)
         {
-            ItemSlotUI slotUI = slotPrefabList[i].GetComponentInChildren<ItemSlotUI>();
+            DropSlotUI slotUI = slotPrefabList[i].GetComponentInChildren<DropSlotUI>();
             DragSlotUI[] dragSlotUi = slotUI.GetComponentsInChildren<DragSlotUI>();
             if (slotUI != null)
             {
@@ -41,11 +41,11 @@ public class EquipInventoryPopupUI : MonoBehaviour,IPopup
     }
     public void ClosePopupUI()
     {
-        throw new System.NotImplementedException();
+        gameObject.SetActive(false);
     }
 
     public void OpenPopupUI()
     {
-        throw new System.NotImplementedException();
+        gameObject.SetActive(true);
     }
 }

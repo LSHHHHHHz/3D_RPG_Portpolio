@@ -43,7 +43,8 @@ public class SlotData
 
         dropData.OnDataChanged?.Invoke();
         dragData.OnDataChanged?.Invoke();
-        OnSlotDataChanged?.Invoke(this);
+        dropData.OnSlotDataChanged?.Invoke(dropData);
+        dragData.OnSlotDataChanged?.Invoke(dragData);
     }
     public void UseItem(SlotData slot)
     {
@@ -67,7 +68,6 @@ public class SlotData
         GameItemData tempItem = dragData.item;
         int tempCount = dragData.count;
         ItemType tempType = dragData.item.type;
-
         dragData.item = dropData.item;
         dragData.count = dropData.count;
         dragData.itemType = dropData.itemType;
@@ -75,10 +75,36 @@ public class SlotData
         dropData.item = tempItem;
         dropData.count = tempCount;
         dropData.itemType = tempType;
+        dropData.OnDataChanged?.Invoke();
+        dragData.OnDataChanged?.Invoke();
+        dropData.OnSlotDataChanged?.Invoke(dropData);
+        dragData.OnSlotDataChanged?.Invoke(dragData);
+    }
+    public void EquipSkill(SlotData dropData, SlotData dragData, ISlotData slotData)
+    {
+        if(CheckEquipSkill(dragData, slotData))
+        {
+            return;
+        }
+        dropData.item = dragData.item;
+        dropData.itemType= dragData.itemType;
 
         dropData.OnDataChanged?.Invoke();
         dragData.OnDataChanged?.Invoke();
-        OnSlotDataChanged?.Invoke(this);
+        dropData.OnSlotDataChanged?.Invoke(dropData);
+        dragData.OnSlotDataChanged?.Invoke(dragData);
+    }
+    bool CheckEquipSkill(SlotData slotData, ISlotData quickSkillSlots)
+    {
+        bool isEquipSkill = false;
+        for(int i =0; i<quickSkillSlots.slotDatas.Count; i++)
+        {
+            if (quickSkillSlots.slotDatas[i].item.name == slotData.item.name)
+            {
+                isEquipSkill = true;
+            }
+        }
+        return isEquipSkill;
     }
 }
 

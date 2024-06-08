@@ -23,7 +23,7 @@ public enum InventoryType
     QuickSkillSlot
 }
 
-public class ItemSlotUI : MonoBehaviour, IDropHandler, IPointerExitHandler, IPointerEnterHandler
+public class DropSlotUI : MonoBehaviour, IDropHandler, IPointerExitHandler, IPointerEnterHandler
 {
     [SerializeField] Image itemIcon;
     [SerializeField] Text description;
@@ -34,18 +34,17 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IPointerExitHandler, IPoi
     [SerializeField] Image coolDownImage;
 
     [SerializeField] GameObject infoPopupPrefab;
-    public ItemType currentItemType;// { get; private set; }
-    public InventoryType currentInventoryType;//{ get; private set; }
+    public ItemType currentItemType { get; private set; }
+    public InventoryType currentInventoryType { get; private set; }
     public bool isActiveCoolTime { get; private set; }
     public SlotData currentSlotData { get; private set; }
     public ISlotData currentISlot { get; private set; }
 
     InfoPopup infoPopup;
-    public Action<SlotData> endDragSlot { get; set; } = null;
-    public Action<SlotData> dropSlot { get; set; } = null;
     private void Start()
     {
         currentSlotData.OnSlotDataChanged += SetData;
+        currentSlotData.OnDataChanged += UpdateSlotUI;
     }
     public void SetData(SlotData data)
     {
@@ -59,7 +58,6 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IPointerExitHandler, IPoi
         this.currentItemType = itemType;
         this.currentInventoryType = inventoryType;
         UpdateSlotUI();
-        currentSlotData.OnDataChanged += UpdateSlotUI;
     }
     void UpdateSlotUI()
     {
@@ -137,14 +135,21 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IPointerExitHandler, IPoi
             if (scroll != null)
             {
                 return;
-            }            
-            if (currentSlotData.item.name != dragSlotUI.dragSlotData.item.name)
+            }
+            if (dragSlotUI.dragItemType != ItemType.Skill)
             {
-                currentSlotData.TempItem(currentSlotData, dragSlotUI.dragSlotData);
+                if (currentSlotData.item.name != dragSlotUI.dragSlotData.item.name)
+                {
+                    currentSlotData.TempItem(currentSlotData, dragSlotUI.dragSlotData);
+                }
+                else
+                {
+                    currentSlotData.MergeItem(currentSlotData, dragSlotUI.dragSlotData);
+                }
             }
             else
             {
-                currentSlotData.MergeItem(currentSlotData, dragSlotUI.dragSlotData);
+                currentSlotData.EquipSkill(currentSlotData, dragSlotUI.dragSlotData, currentISlot);
             }
         }
     }
@@ -157,12 +162,12 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IPointerExitHandler, IPoi
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (infoPopupPrefab != null &&currentSlotData.item != null && currentSlotData.item.name != "" && currentSlotData.item.name != null)
+        if (infoPopupPrefab != null && currentSlotData.item != null && currentSlotData.item.name != "" && currentSlotData.item.name != null)
         {
             if (infoPopup == null)
             {
                 infoPopup = Instantiate(infoPopupPrefab, TransformFactory.instance.infoPopupTransform).GetComponent<InfoPopup>();
-                infoPopup.SetData(currentSlotData,this.transform);
+                infoPopup.SetData(currentSlotData, this.transform);
             }
             else
             {
@@ -177,12 +182,12 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IPointerExitHandler, IPoi
     }
     bool CheckPossibleDrop(InventoryType dropInventoryType, ItemType dragitemType)
     {
-        switch(dropInventoryType)
+        switch (dropInventoryType)
         {
             case InventoryType.ItemInventory:
                 return dragitemType != ItemType.Skill;
             case InventoryType.EquipItemInventory:
-                return dragitemType == ItemType.Weapon || dragitemType == ItemType.Shield;    
+                return dragitemType == ItemType.Weapon || dragitemType == ItemType.Shield;
             case InventoryType.QuickPortionSlot:
                 return dragitemType == ItemType.Portion;
             case InventoryType.SkillInventory:

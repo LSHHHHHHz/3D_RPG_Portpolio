@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class QuickSlots : MonoBehaviour
+public class QuickSlotsBase : MonoBehaviour
 {
     protected ISlotData iSlotData;
     protected InventoryType inventoryType;
@@ -26,7 +26,7 @@ public class QuickSlots : MonoBehaviour
         }
         for (int i = 0; i < slotPrefabList.Count; i++)
         {
-            ItemSlotUI itemSlotUI = slotPrefabList[i].GetComponentInChildren<ItemSlotUI>();
+            DropSlotUI itemSlotUI = slotPrefabList[i].GetComponentInChildren<DropSlotUI>();
             DragSlotUI[] dragSlotUI = itemSlotUI.GetComponentsInChildren<DragSlotUI>();
             if (itemSlotUI != null)
             {
@@ -44,7 +44,7 @@ public class QuickSlots : MonoBehaviour
         {
             int index = i;
             Transform transform= parent.GetChild(i).transform;
-            ItemSlotUI slotUI = transform.GetComponentInChildren<ItemSlotUI>();
+            DropSlotUI slotUI = transform.GetComponentInChildren<DropSlotUI>();
             DragSlotUI dragSlotUi = slotUI.GetComponentInChildren<DragSlotUI>();
             if(slotUI != null)
             {
@@ -59,7 +59,7 @@ public class QuickSlots : MonoBehaviour
             }
         }
     }
-    protected void ClickQuickPortionSlotButton(ItemSlotUI slot, int index)
+    protected void ClickQuickPortionSlotButton(DropSlotUI slot, int index)
     {
         Player.instance.ClickQuickSlot(iSlotData, slot, index);
     }

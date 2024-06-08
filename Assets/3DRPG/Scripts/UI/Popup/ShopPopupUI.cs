@@ -46,7 +46,7 @@ public class ShopPopupUI : MonoBehaviour,IPopup
         for(int i =0; i< shopData.slotDatas.Count; i++)
         {
             shopData.slotDatas[i].AddItem(gameItemDatas[i], 1);
-            ItemSlotUI slotUI = slotPrefabList[i].GetComponentInChildren<ItemSlotUI>();
+            DropSlotUI slotUI = slotPrefabList[i].GetComponentInChildren<DropSlotUI>();
             if (slotUI != null)
             {
                 slotUI.SetData(shopData.slotDatas[i], shopData, shopData.slotDatas[i].item.type, inventoryType);
@@ -58,7 +58,7 @@ public class ShopPopupUI : MonoBehaviour,IPopup
         for (int i = 0; i < parent.childCount; i++)
         {
             Transform transform = parent.GetChild(i);
-            ItemSlotUI slot = transform.GetComponentInChildren<ItemSlotUI>();
+            DropSlotUI slot = transform.GetComponentInChildren<DropSlotUI>();
             if (slot != null)
             {
                 int slotIndex = i;

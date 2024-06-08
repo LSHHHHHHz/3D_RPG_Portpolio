@@ -12,23 +12,18 @@ public class DragSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 {
     [SerializeField] Image itemIcon;
     [SerializeField] Sprite nullImage;
-    [SerializeField] public Button buttonIcon;
-
-    public ItemType dragItemType;
-    public InventoryType dragInventoryType;
-    [SerializeField] public SlotData dragSlotData { get; private set; }
+    public Button buttonIcon { get; private set; }
+    public ItemType dragItemType { get; private set; }
+    public InventoryType dragInventoryType { get; private set; }
+    public SlotData dragSlotData;
     public ISlotData dragISlotData { get; private set; }
 
     //드래그앤드랍
     Transform canvas;
     RectTransform rect;
     CanvasGroup canvasGroup;
-
-    [SerializeField] Transform previousParent;
-    [SerializeField] RectTransform slotRectTransform;
-    public Action initializeSlot { get; private set; } = null;
-    public Action<SlotData> endDragSlot { get; set; } = null;
-    public Action<SlotData> dropSlot { get; set; } = null;
+    Transform previousParent;
+    RectTransform slotRectTransform;
     public bool isDragging { get; private set; } = false;
     private void Awake()
     {
@@ -39,12 +34,14 @@ public class DragSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         }
         rect = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
+        buttonIcon = GetComponent<Button>();
     }
     private void Start()
     {
         dragSlotData.OnSlotDataChanged += SetData;
+        dragSlotData.OnDataChanged += UpdateSlotUI;
     }
-    public void SetData(SlotData data)
+    private void SetData(SlotData data)
     {
         this.dragSlotData = data;
         this.dragItemType = data.itemType;
@@ -56,7 +53,6 @@ public class DragSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         this.dragItemType = itemType;
         this.dragInventoryType= inventoryType;
         UpdateSlotUI();
-        dragSlotData.OnDataChanged += UpdateSlotUI;
     }
     public void UpdateSlotUI()
     {
@@ -66,7 +62,7 @@ public class DragSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             {
                 itemIcon.sprite = Resources.Load<Sprite>(dragSlotData.item.iconPath);
             }
-            if (dragSlotData.item == null || dragSlotData.item.name == "" || dragSlotData.count == 0)
+            if (dragSlotData.item == null || dragSlotData.item.name == "" || (dragSlotData.item.type != ItemType.Skill && dragSlotData.count == 0))
             {
                 itemIcon.sprite = nullImage;
             }

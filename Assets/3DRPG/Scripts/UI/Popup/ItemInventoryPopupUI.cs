@@ -27,7 +27,7 @@ public class ItemInventoryPopupUI : MonoBehaviour,IPopup
         }
         for(int i =0; i< itemInventoryData.slotDatas.Count; i++ )
         {
-            ItemSlotUI slotUI = slotPrefabList[i].GetComponentInChildren<ItemSlotUI>();
+            DropSlotUI slotUI = slotPrefabList[i].GetComponentInChildren<DropSlotUI>();
             DragSlotUI[] dragSlotUi = slotUI.GetComponentsInChildren<DragSlotUI>();
             if(slotUI != null)
             {
@@ -44,7 +44,7 @@ public class ItemInventoryPopupUI : MonoBehaviour,IPopup
         for (int i = 0; i < slotsTransform.childCount; i++)
         {
             Transform transform = slotsTransform.GetChild(i);
-            ItemSlotUI itemSlotUI = transform.GetComponentInChildren<ItemSlotUI>();
+            DropSlotUI itemSlotUI = transform.GetComponentInChildren<DropSlotUI>();
             if (itemSlotUI != null)
             {
                 if (itemSlotUI.GetComponent<Button>() != null)
@@ -55,17 +55,6 @@ public class ItemInventoryPopupUI : MonoBehaviour,IPopup
                         Debug.Log("버튼이 있을 경우만");
                     });
                 }
-            }
-        }
-    }
-    void SetSlotData(SlotData slot, int num)
-    {
-        for (int i = 0; i < itemInventoryData.slotDatas.Count; i++)
-        {
-            if (i == num)
-            {
-                itemInventoryData.slotDatas[i] = slot;
-                break;
             }
         }
     }

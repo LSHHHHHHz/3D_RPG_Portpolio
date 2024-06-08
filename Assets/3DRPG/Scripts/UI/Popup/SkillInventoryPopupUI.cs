@@ -5,38 +5,50 @@ using UnityEngine.UI;
 
 public class SkillInventoryPopupUI : MonoBehaviour,IPopup
 {
-    ISlotData skillInventoryData;
     GameItemData[] gameItemDatas;
-    [SerializeField] RectTransform[] skillSlots;
+    [SerializeField] InventoryType skillInventoryType;
+    ISlotData skillInventoryData;
+    [SerializeField] RectTransform slotsTransform;
+    private List<GameObject> slotPrefabList = new List<GameObject>();
     private void Awake()
     {
-        skillInventoryData = GameData.instance.skillInventoryData;
-        SetSkillData();
-        SetChildSkillSlot();
-    }
-    void SetSkillData()
-    {
         gameItemDatas = GameData.instance.staticGameItemData.skillDatas.ToArray();
+        skillInventoryData = GameData.instance.skillInventoryData;
+        skillInventoryType = InventoryType.SkillInventory;
+        CheckTransformChild(slotsTransform);
+        SetSlots();
     }
-    void SetChildSkillSlot()
+    void SetSlots()
     {
-        for(int i=0; i< skillSlots.Length; i++)
+        for (int i = 0; i < skillInventoryData.slotDatas.Count; i++)
         {
+            DropSlotUI slotUI = slotPrefabList[i].GetComponentInChildren<DropSlotUI>();
+            DragSlotUI[] dragSlotUi = slotUI.GetComponentsInChildren<DragSlotUI>();
             skillInventoryData.slotDatas[i].AddItem(gameItemDatas[i], 1);
-            SkillSlotUI skillSlot = skillSlots[i].GetComponent<SkillSlotUI>();
-            if(skillSlot != null)
+            if (slotUI != null)
             {
-                skillSlot.SetData(skillInventoryData.slotDatas[i]);
+                slotUI.SetData(skillInventoryData.slotDatas[i], skillInventoryData, skillInventoryData.slotDatas[i].item.type, skillInventoryType);
             }
+            if (dragSlotUi != null)
+            {
+                dragSlotUi[0].SetData(skillInventoryData.slotDatas[i], skillInventoryData, skillInventoryData.slotDatas[i].item.type, skillInventoryType);
+            }
+        }
+    }
+    void CheckTransformChild(RectTransform parent)
+    {
+        for (int i = 0; i < parent.childCount; i++)
+        {
+            slotPrefabList.Add(parent.GetChild(i).gameObject);
         }
     }
     public void ClosePopupUI()
     {
-        throw new System.NotImplementedException();
+        gameObject.SetActive(false);
     }
 
     public void OpenPopupUI()
     {
-        throw new System.NotImplementedException();
+        gameObject.SetActive(true);
     }
 }

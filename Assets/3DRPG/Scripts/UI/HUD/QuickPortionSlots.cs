@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class QuickPortionSlots : QuickSlots
+public class QuickPortionSlots : QuickSlotsBase
 {
     protected override void Awake()
     {

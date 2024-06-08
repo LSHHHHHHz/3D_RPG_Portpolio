@@ -97,7 +97,7 @@ public class Player : MonoBehaviour, IActor
         playerCurrencyData.ConsumeCoint(consumCoin);
         playerStatusUI.SetData(playerCurrencyData);
     } 
-    public void ClickQuickSlot(ISlotData slotData,ItemSlotUI itemSlot, int index)
+    public void ClickQuickSlot(ISlotData slotData,DropSlotUI itemSlot, int index)
     {
         if(slotData is QuickSkillSlotData quickSkill)
         {
